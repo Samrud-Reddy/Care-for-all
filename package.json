@@ -1,0 +1,19 @@
+{
+  "name": "code_for_all",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "run": "nodemon",
+
+    "build_sass": "sass sass:styles --style=compressed",
+    "watch_sass": "sass sass:styles -w --style=compressed"
+  },
+  "author": "Samrud Reddy",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2"
+  }
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/index.css">
+
+    <link rel="shortcut icon" href="files/logo.png">
+    <title>Care For All</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js" defer></script>
+    <script src="scripts/main-page.js" defer></script>
+
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo"><img src="files/logo.png" alt="Care For All Logo"><p>Care For All</p></div>
+        <div></div>
+        <div class="dropdown"><p>About us▼</p>
+            <div class="dropdown-content">
+                <button class="navbutton">What we are</button>
+                <button class="navbutton">What we do</button>
+                <button class="navbutton">Our mission</button>
+                <button class="navbutton">Our Journey</button>
+                <button class="navbutton">Our team</button>
+            </div>
+        </div>
+        <div class="dropdown"><p>Our work ▼</p>
+            <div class="dropdown-content">
+                <button class="navbutton">Work done</button>
+                <button class="navbutton">Lives impacted</button>
+                <button class="navbutton">Our collaborations</button>
+                <button class="navbutton">Fund raising events</button>
+            </div>
+        </div>
+
+        <div class="dropdown"><p>Donate now</p></div>
+    </div>
+    <div style="height: 5rem;"></div>
+    <section class="carasoul">
+        <img src="files/left.png" alt="<-" class="arrow left" onclick="change_slides(-1)">
+        <div class="images">
+            <img src="files/img carasoul/1.jpeg" alt="NGO image" class="slideshow">
+            <img src="files/img carasoul/2.jpeg" alt="NGO image" class="slideshow">
+            <img src="files/img carasoul/3.jpeg" alt="NGO image" class="slideshow">
+        </div>
+        <img src="files/right.png" alt="<-" class="arrow right" onclick="change_slides(1)">
+        
+        <div class="selector">
+        </div>
+    </section>
+</body>
+</html>
