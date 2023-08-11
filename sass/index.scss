@@ -4,20 +4,54 @@ $primary: #322e38;
 $secondary: #10110e;
 $accent: #726b80;
 
-.slideshow {
-    position: relative;
+$width-carasel: calc(100vw - 7rem);
+
+.carasel{
+    height: 100%;
+    width: $width-carasel;
     transform: translateX(-50%);
     left: 50%;
-    width: 90vw;
-    height: calc(100vh - 8rem);
-    margin-block-start: 1rem;
+
+    position: relative;
+    overflow-x: hidden;
 }
 
-.carasoul{
+.images{
+
+    display: grid;
+    grid-template-columns: repeat(100, $width-carasel);
+    grid-template-rows: 100%;
+    
+    height: 100%;
+}
+
+.slideshow {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    // animation: leave 2s;
+}
+
+@keyframes leave {
+    from{
+        left: 0%;
+        opacity: 100%;
+    }
+
+    to{
+        left: 100%;
+        opacity: 0%;
+    }
+}
+
+
+
+.carasoul-section{
     position: relative;
     height: calc(100vh - 5rem);
-    width: 100vw;
 }
+
+
 
 .arrow{
     box-sizing: content-box !important;
@@ -50,24 +84,25 @@ $accent: #726b80;
 
     align-items: center;
     justify-content: center;
-
+    
+    position: absolute;
+    bottom: 2%;
 }
 
 .dot{
     height: 1.5rem;
     aspect-ratio: 1/1;
 
-    border: $accent 0.2rem solid;
+
+    border: $background 0.2rem solid;
     border-radius: 100%;
     margin-inline: 0.5rem;
 
     &:hover{
-        background-color: $accent;
-        border-color: $background;
+        background-color: $background;
     }
 }
 
 .selected{
-    background-color: $accent;
-    border-color: $background;
+    background-color: $background;
 }

@@ -38,14 +38,16 @@
         <div class="dropdown"><p>Donate now</p></div>
     </div>
     <div style="height: 5rem;"></div>
-    <section class="carasoul">
-        <img src="files/left.png" alt="<-" class="arrow left" onclick="change_slides(-1)">
-        <div class="images">
-            <img src="files/img carasoul/1.jpeg" alt="NGO image" class="slideshow">
-            <img src="files/img carasoul/2.jpeg" alt="NGO image" class="slideshow">
-            <img src="files/img carasoul/3.jpeg" alt="NGO image" class="slideshow">
+    <section class="carasoul-section">
+        <img src="files/left.png" alt="<-" class="arrow left" onclick="move_slide_forward(false)">
+        <div class="carasel">
+            <div class="images">
+                <img src="files/img carasoul/1.jpeg" alt="NGO image" class="slideshow">
+                <img src="files/img carasoul/2.jpeg" alt="NGO image" class="slideshow">
+                <img src="files/img carasoul/3.jpeg" alt="NGO image" class="slideshow">
+            </div>
         </div>
-        <img src="files/right.png" alt="<-" class="arrow right" onclick="change_slides(1)">
+        <img src="files/right.png" alt="<-" class="arrow right" onclick="move_slide_forward(true)">
         
         <div class="selector">
         </div>
