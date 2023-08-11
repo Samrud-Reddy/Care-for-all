@@ -10,9 +10,15 @@ function mod(n, m) {
     return ((n % m) + m) % m;
   }
 
+function update_selector(){
+    $(`.dot`).removeClass("selected")
+    $(`.dot:nth-child(${slide_pos})`).addClass("selected")
+}
+
 
 function setSlidePos(x){
     slide_pos = x;
+    update_selector()
     let width_of_img = $(window).width() - (rem * 7);
     let fixed_x = mod((x-1), (number_of_slides))
    
