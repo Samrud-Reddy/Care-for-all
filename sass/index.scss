@@ -1,10 +1,24 @@
-$text: #f5f6f4;
-$background: #0d0e0c;
-$primary: #322e38;
-$secondary: #10110e;
-$accent: #726b80;
+$text: white;
+$background: #161613;
+$primary: #9494a4;
+$secondary: #24241e;
+$accent: #7e7f91;
 
-$width-carasel: calc(100vw - 7rem);
+$width-carasel: calc(90vw - 7rem);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Ubuntu:wght@300;400;500;700&display=swap');* {
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+body {
+    background-color: $background;
+    color: $text;
+}
 
 .carasel{
     height: 100%;
@@ -48,7 +62,8 @@ $width-carasel: calc(100vw - 7rem);
 
 .carasoul-section{
     position: relative;
-    height: calc(100vh - 5rem);
+    height: calc(85vh - 5rem);
+    margin-top: 2rem;
 }
 
 
@@ -68,12 +83,12 @@ $width-carasel: calc(100vw - 7rem);
 
 .left{
     left: 0px;
-    margin-left: 0.5rem;
+    margin-left: 2rem;
 }
 
 .right{
     right: 0px;
-    margin-right: 0.5rem;
+    margin-right: 2rem;
 }
 
 .selector{
@@ -90,13 +105,13 @@ $width-carasel: calc(100vw - 7rem);
 }
 
 .dot{
-    height: 1.5rem;
+    height: 0.5rem;
     aspect-ratio: 1/1;
 
 
     border: $background 0.2rem solid;
     border-radius: 100%;
-    margin-inline: 0.5rem;
+    margin-inline: 0.2rem;
 
     &:hover{
         background-color: $background;
@@ -105,4 +120,24 @@ $width-carasel: calc(100vw - 7rem);
 
 .selected{
     background-color: $background;
+}
+
+
+.website-section{
+    height: 80vh;
+    padding: 1rem;
+    background-color: $background;
+    margin: 2rem;
+
+    h1{
+        text-decoration-thickness: 3px;
+        font-size: 3rem;
+    }
+
+    &:nth-child(odd){
+        text-align: right !important;
+    }
+    &:nth-child(even){
+        text-align: left !important;
+    }
 }

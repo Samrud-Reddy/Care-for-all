@@ -1,19 +1,21 @@
-$text: #f5f6f4;
-$background: #0d0e0c;
-$primary: #322e38;
-$secondary: #10110e;
-$accent: #726b80;
+$text: #ffee71;
+$background: #161613;
+$primary: #333339;
+$secondary: #24241e;
+$accent: #7e7f91;
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Ubuntu:wght@300;400;500;700&display=swap');
 *{
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 body {
-    font-family: 'Nunito', sans-serif;
+
     background-color: $background;
     color: $text;
 }
@@ -21,13 +23,12 @@ body {
 
 
 .navbar{
-    background-color: black;
-    border-bottom: solid white 2px;
+    background-color: $background;
 
 
     display: grid;
     grid-template-rows: 5rem;
-    grid-template-columns: auto 1fr repeat(3, minmax(2rem, 10rem)) 1rem;
+    grid-template-columns: auto 1fr repeat(3, minmax(2rem, 10rem)) 4rem;
 
     
     justify-content: center;
@@ -45,6 +46,7 @@ body {
 
 
 .logo {
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -56,21 +58,21 @@ body {
         aspect-ratio: 1/1;
         height: 4rem;
     }
+
+    margin-left: 1rem;
 }
 
 
 
 .dropdown{
-    background-color: $primary;
     color: $text;
-    border: solid white 1px;
     border-radius: 1rem;
     position: relative;
 
     font-weight: 300;
     text-align: center;
 
-    margin-inline: 0.5rem;
+    margin-inline: 0.2rem;
     padding: 0.1rem;
     height: 4rem;
 
@@ -81,6 +83,7 @@ body {
 
         font-size: 1.3rem;
         cursor: pointer;
+        color: white;
     }
 
 
@@ -90,8 +93,7 @@ body {
     }
 
     &:hover{
-        border: solid $accent 4px;
-        filter: brightness(80%);
+        filter: brightness(60%);
 
     }
 }
@@ -134,7 +136,8 @@ body {
     opacity: 100%;
     font-size: 1rem;
     padding: 0.1rem;
-    border-bottom: solid $accent 2px;
+
+    margin-block: 0.2rem;
 
     &:last-child{
         border-bottom: none;

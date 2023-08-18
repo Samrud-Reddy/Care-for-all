@@ -19,7 +19,7 @@ function update_selector(){
 function setSlidePos(x){
     slide_pos = x;
     update_selector()
-    let width_of_img = $(window).width() - (rem * 7);
+    let width_of_img = ($(window).width()*0.9) - (rem * 6);
     let fixed_x = mod((x-1), (number_of_slides))
    
     // let start_pos = $(".carasel").scrollLeft();
