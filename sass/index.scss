@@ -15,6 +15,27 @@ body{
     overflow-x: hidden;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $background;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $primary;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $accent;
+}
+
 body {
     background-color: $background;
     color: $text;
@@ -43,7 +64,19 @@ body {
     height: 100%;
     width: 100%;
     position: relative;
-    // animation: leave 2s;
+    animation: leave 2s both;
+}
+
+@keyframes enter {
+    from{
+        left: -200%;
+        opacity: 0%;
+    }
+
+    to{
+        left: 0%;
+        opacity: 100%;
+    }
 }
 
 @keyframes leave {
@@ -53,8 +86,8 @@ body {
     }
 
     to{
-        left: 100%;
-        opacity: 0%;
+        left: -200%;
+        opacity: 100%;
     }
 }
 
