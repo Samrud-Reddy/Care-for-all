@@ -5,19 +5,25 @@ $secondary: #24241e;
 $accent: #7e7f91;
 
 $width-carasel: calc(90vw - 7rem);
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Ubuntu:wght@300;400;500;700&display=swap');* {
-    font-family: 'Montserrat', sans-serif;
-    font-family: 'Ubuntu', sans-serif;
-    font-weight: 300;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Ubuntu:wght@300;400;500;700&display=swap');
+
 
 body{
+    font-family: 'Montserrat', sans-serif;
+
     overflow-x: hidden;
+
+    scrollbar-width: auto;
+    scrollbar-color: $background $text;
 }
 
-/* width */
+body {
+    background-color: $background;
+    color: $text;
+}
+
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 /* Track */
@@ -28,17 +34,12 @@ body{
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: $primary;
-  border-radius: 5px;
+    border-radius: 5px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: $accent;
-}
-
-body {
-    background-color: $background;
-    color: $text;
 }
 
 .carasel{
@@ -64,31 +65,11 @@ body {
     height: 100%;
     width: 100%;
     position: relative;
-    animation: leave 2s both;
+    transition: left 1s;
 }
 
-@keyframes enter {
-    from{
-        left: -200%;
-        opacity: 0%;
-    }
-
-    to{
-        left: 0%;
-        opacity: 100%;
-    }
-}
-
-@keyframes leave {
-    from{
-        left: 0%;
-        opacity: 100%;
-    }
-
-    to{
-        left: -200%;
-        opacity: 100%;
-    }
+.go_left{
+    left: 100%;
 }
 
 
