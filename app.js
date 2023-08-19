@@ -15,7 +15,8 @@ app.use("*/scripts", express.static(path.join(__dirname, "scripts")));
 // });
 
 app.get('/', (req, res) => {
-  res.render('index.ejs')
+  let number_of_images_in_carasel = 4
+  res.render('index.ejs', {images: number_of_images_in_carasel})
 })
 
 

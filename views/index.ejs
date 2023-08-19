@@ -41,15 +41,17 @@
     </div>
     <div style="height: 5rem;"></div>
     <section class="carasoul-section">
-        <img src="files/left.png" alt="<-" class="arrow left" onclick="move_slide_forward(false)">
+        <img src="files/left.png" alt="<-" class="arrow left" onclick="go_left()">
         <div class="carasel">
             <div class="images">
+                <% for( let i = 0; i < images; i++ ) { %>
+                    <img src="files/img carasoul/<%= i+1 %>.jpeg" alt="NGO image" class="slideshow">
+                <% } %>
                 <img src="files/img carasoul/1.jpeg" alt="NGO image" class="slideshow">
-                <img src="files/img carasoul/2.jpeg" alt="NGO image" class="slideshow">
-                <img src="files/img carasoul/3.jpeg" alt="NGO image" class="slideshow">
+
             </div>
         </div>
-        <img src="files/right.png" alt="<-" class="arrow right" onclick="move_slide_forward(true)">
+        <img src="files/right.png" alt="<-" class="arrow right" onclick="go_right()">
         
         <div class="selector">
         </div>
