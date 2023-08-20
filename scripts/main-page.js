@@ -70,8 +70,8 @@ setPos(slide_pos)
 var running = false;
 
 
-// let interval_time = 5
-// let intervalId = setInterval(function(){go_right()}, interval_time*1000);
+let interval_time = 7
+let intervalId = setInterval(function(){go_right()}, interval_time*1000);
 
 
 
