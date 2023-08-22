@@ -1,149 +1,15 @@
-$text: white;
-$background: #161613;
-$primary: #9494a4;
-$secondary: #24241e;
-$accent: #7e7f91;
-
-$width-carasel: calc(90vw - 7rem);
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Ubuntu:wght@300;400;500;700&display=swap');
-
-
+@import '_colors';
+@import '_carasel', '_navbar';
 body{
     font-family: 'Montserrat', sans-serif;
 
     overflow-x: hidden;
-
-    scrollbar-width: auto;
-    scrollbar-color: $background $text;
 }
 
 body {
     background-color: $background;
     color: $text;
 }
-
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: $background;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: $primary;
-    border-radius: 5px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: $accent;
-}
-
-.carasel{
-    height: 100%;
-    width: $width-carasel;
-    transform: translateX(-50%);
-    left: 50%;
-
-    position: relative;
-    overflow-x: hidden;
-}
-
-.images{
-    display: grid;
-    grid-template-columns: repeat(100, $width-carasel);
-    grid-template-rows: 100%;
-    
-    height: 100%;
-}
-
-.slideshow {
-    height: 100%;
-    width: 100%;
-    position: relative;
-}
-
-.go_right1{
-    animation: go_right 2s both;
-}
-
-@keyframes go_right {
-    from{
-        right: 0%;
-    }
-
-    to{
-        right: 100%;
-    }
-}
-
-
-
-.carasoul-section{
-    position: relative;
-    height: calc(85vh - 5rem);
-    margin-top: 2rem;
-}
-
-
-
-.arrow{
-    box-sizing: content-box !important;
-    position: absolute;
-    height: 5rem;
-    transform: translateY(-50%);
-    top: 50%;
-    padding-block: 10vh;
-
-    &:hover{
-        filter: brightness(200%);
-    }
-}
-
-.left{
-    left: 0px;
-    margin-left: 2rem;
-}
-
-.right{
-    right: 0px;
-    margin-right: 2rem;
-}
-
-.selector{
-    width: 100vw;
-    display: flex;
-    flex-direction: row;
-    gap: 0.8rem;
-
-    align-items: center;
-    justify-content: center;
-    
-    position: absolute;
-    bottom: 2%;
-}
-
-.dot{
-    height: 0.8rem;
-    aspect-ratio: 1/1;
-
-
-    border: $background 0.2rem solid;
-    border-radius: 100%;
-    margin-inline: 0.2rem;
-
-    &:hover{
-        background-color: $background;
-    }
-}
-
-.selected{
-    background-color: $background;
-}
-
 
 .website-section{
     height: 80vh;
