@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/navbar.css">
     <link rel="stylesheet" href="styles/index.css">
-    <link rel="stylesheet" href="styles/carasel.css">
+
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,9 +18,7 @@
     <script src="scripts/carasel.js" defer></script>
     <script src="scripts/scroll-reveal.js" defer></script>
 
-</head>
-<body>
-    <div class="navbar">
+    <nav class="navbar">
         <div class="logo"><img src="files/logo.png" alt="Care For All Logo"><p>CareForAll</p></div>
         <div></div>
         <div class="dropdown"><p>ABOUT US</p>
@@ -35,7 +32,7 @@
         </div>
         <div class="dropdown"><p>OUR WORK</p>
             <div class="dropdown-content">
-                <button class="navbutton">What we've done</button>
+                <button class="navbutton">What we've done so far</button>
                 <button class="navbutton">Our Collaborations</button>
             </div>
         </div>
@@ -45,7 +42,11 @@
         </div>
 
         <div class="dropdown"><p>DONATE NOW</p></div>
-    </div>
+    </nav>
+
+</head>
+<body>
+
     <div style="height: 5rem;"></div>
     <section class="carasoul-section">
         <img src="files/left.png" alt="<-" class="arrow left" onclick="go_left()">
@@ -67,7 +68,47 @@
         <h1>Our Mission</h1>
     </section>
     <section class="website-section">
-        <h1>Our Journey</h1>
+    <h1>Our Journey</h1>
+    
+
+
+	<div class="entire_timeline">
+        <div class="timeline">
+                <div class="event">
+                    <span data-year="1910" data-info="Start"></span>
+                </div>
+                <div class="event not_end active">
+                    <span data-year="1910" data-info="First med camp"></span>
+                </div>
+                <div class="event not_end">
+                    <span data-year="1920" data-info="First camp"></span>
+                </div>
+                <div class="event not_end">
+                    <span data-year="1930" data-info="Integration Lending Library"></span>
+                </div>
+                <div class="event not_end">
+                    <span data-year="1940" data-info="Collab with Ramaiah"></span>
+                </div>
+                <div class="event not_end">
+                    <span data-year="1950" data-info="Biggest med camp"></span>
+                </div>
+                <div class="event not_end">
+                    <span data-year="1960" data-info="Mention in Times"></span>
+                </div>
+                <div class="event">
+                    <span data-year="1960" data-info="Now"></span>
+                </div>
+        </div>
+            
+                <div class="descripters">
+                    <p class="active">First med camp blah blah</p>
+                    <p>First awarness camp blah blah</p>
+                    <p>Donated books</p>
+                    <p>Collab with Ramaiah college i think</p>
+                    <p>Very big med camp</p>
+                    <p>we were in the news</p>
+                </div>
+    </div>
     </section>
     <section class="website-section">
         <h1>What Makes Us Unique</h1>
@@ -75,8 +116,14 @@
     <section class="website-section">
         <h1>Our Team</h1>
     </section>
-    <section class="website-section">
+    <section class="website-section" id="what-is-done">
         <h1>What We've Done</h1>
+        <div class="counters">
+            <div class="label">Lives touched</div>
+            <div class="counter" final="646" time="1">0</div>
+            <div class="label">Camps conducted</div>
+            <div class="counter" final="63" time="1">0</div>
+        </div>
     </section>
     <section class="website-section">
         <h1>Our Collaborations</h1>

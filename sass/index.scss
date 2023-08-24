@@ -1,5 +1,5 @@
 @import '_colors';
-@import '_carasel', '_navbar';
+@import '_carasel', '_navbar', '_timeline';
 body{
     font-family: 'Montserrat', sans-serif;
 
@@ -15,26 +15,21 @@ body {
     height: 85vh;
     padding: 1rem;
     background-color: $background;
-    position: relative;
     margin: 2rem;
+
 
     &:nth-child(odd){
         h1{
-            right: -100%;
+            text-align: right;
         }
     }
     &:nth-child(even){
         h1{
-            left: -100%;
+            text-align: left;
         }
     }
 
     h1{
-        width: max-content;
-        position: absolute;
-        opacity: 0%;
-        transition: opacity left right 1s ease-out;
-
         text-decoration-thickness: 3px;
         font-size: 3rem;
     }
@@ -43,21 +38,28 @@ body {
 }
 
 
+//what we've done
+.counters{
+    margin-block: 3rem;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
 
+    font-size: 2rem;
+    width: max-content;
 
-.active{
-    h1{
-        opacity: 100%;
-    }
-    &:nth-child(odd){
-        h1{
-            right: 0px;
-        }
-    }
-    &:nth-child(even){
-        h1{
-            left: 0px;
-        }
+    justify-content: center;
+    align-items: center;
+    
+    text-align: left;
+
+    .label{
+
     }
 
+    .counter{
+        width: 3rem;
+        margin-left: 2rem;
+    }
 }
+
