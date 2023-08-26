@@ -1,11 +1,12 @@
 $active: #2C3E50;
 $inactive: #AEB6BF;
 
-$events: 6;
+$events: 7;
 $timeline_width: calc(80vw - 3rem);
 $half_timeline_width: calc($timeline_width / calc(2 * $events));
 
 $event_width: 2rem;
+$trans_time: 0.25s;
 
 .entire_timeline{
     margin-block: 5rem;
@@ -35,9 +36,7 @@ $event_width: 2rem;
     background-color: $active;
     position: relative;
 
-    &::hover{
-        cursor: pointer;
-    }
+
 
     &:first-child::before, &:last-child::after{
         display: none;
@@ -90,6 +89,13 @@ $event_width: 2rem;
     position: absolute;
 
     width: max-content;
+
+}
+
+.not_end:hover > span::before{
+    font-size: 1.2rem;
+    transition: all $trans_time;
+
 }
 
 .event:first-child span::before {
@@ -115,7 +121,27 @@ $event_width: 2rem;
 
 }
 
+.not_end>span{
+    width: $event_width;
+    height: $event_width;
+    position: absolute;
 
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+
+    display: block;
+    border-radius: 50%;
+    background-color: inherit;
+    
+    &:hover{
+        transition: all $trans_time;
+        cursor: pointer;
+        width: calc($event_width * 1.2);
+        height: calc($event_width * 1.2);
+    }
+
+}
 
 
 .descripters>p{
