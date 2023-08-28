@@ -18,16 +18,7 @@ body {
     margin: 2rem;
 
 
-    &:nth-child(odd){
-        h1{
-            text-align: right;
-        }
-    }
-    &:nth-child(even){
-        h1{
-            text-align: left;
-        }
-    }
+    text-align: center;
 
     h1{
         text-decoration-thickness: 3px;

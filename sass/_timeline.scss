@@ -94,7 +94,7 @@ $trans_time: 0.25s;
 
 .not_end:hover > span::before{
     font-size: 1.2rem;
-    transition: all $trans_time;
+    transition: all $trans_time ease-out;
 
 }
 
@@ -135,7 +135,7 @@ $trans_time: 0.25s;
     background-color: inherit;
     
     &:hover{
-        transition: all $trans_time;
+        transition: all $trans_time ease-out;
         cursor: pointer;
         width: calc($event_width * 1.2);
         height: calc($event_width * 1.2);
