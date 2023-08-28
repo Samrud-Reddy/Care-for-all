@@ -1,5 +1,5 @@
 @import '_colors';
-@import '_carasel', '_navbar', '_timeline';
+@import '_carasel', '_navbar';
 body{
     font-family: 'Montserrat', sans-serif;
 
@@ -31,26 +31,28 @@ body {
 }
 
 //Our mission
+//What makes us unique
 #mission{
     height: fit-content;
-    .content{
-        margin-inline: 10rem;
-        margin-block: 1rem;
-        display: flex;
-        flex-direction: row;
+}
+.simple_content{
+    margin-inline: 10rem;
+    margin-block: 1rem;
+    display: flex;
+    flex-direction: row;
 
-        img{
-            width: 35%;
-            margin-right: 3rem;
-        }
-
-        p{
-            font-size: 1.5rem;
-        }
-
+    img{
+        width: 35%;
+        margin-right: 3rem;
     }
+    p{
+        font-size: 1.5rem;
+    }
+
 }
 
+//timeline
+@import '_timeline';
 
 
 //what we've done
@@ -74,3 +76,65 @@ body {
     }
 }
 
+//Our Team
+#team{
+    position: relative;
+    height: fit-content;
+    
+
+    .wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        
+        position: absolute;
+        transform: translateX(-50%);
+        left: 50%;
+        
+        
+        justify-content: space-between;
+        align-items: center;
+        
+        margin-top: 3rem;
+        width: 75%;
+        height: 30rem;
+
+    }
+
+    .idcard{
+        display: flex;
+        flex-direction: column; 
+        justify-content: start;
+        align-items: center;
+
+        width: 15rem;
+
+        height: 100%;
+
+
+        h3{
+            font-size: 1.5rem;
+            margin-block: 0.5rem;
+        }
+
+        
+        img{
+            width: 80%;
+            aspect-ratio: 1 / 1;
+            border-radius: 50%;
+        }
+
+        .title{
+            text-transform: uppercase;
+            color: #888;
+            margin  : 0.5rem;
+            font-size: 1rem;
+        }
+
+
+        p{
+            margin-top: 1rem;
+            width: 80%;
+        }
+
+    }
+}
