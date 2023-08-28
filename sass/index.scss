@@ -17,6 +17,8 @@ body {
     background-color: $background;
     margin: 2rem;
 
+    scroll-margin-top: 5rem;
+
 
     text-align: center;
 
@@ -27,6 +29,28 @@ body {
 
     
 }
+
+//Our mission
+#mission{
+    height: fit-content;
+    .content{
+        margin-inline: 10rem;
+        margin-block: 1rem;
+        display: flex;
+        flex-direction: row;
+
+        img{
+            width: 35%;
+            margin-right: 3rem;
+        }
+
+        p{
+            font-size: 1.5rem;
+        }
+
+    }
+}
+
 
 
 //what we've done
@@ -43,10 +67,6 @@ body {
     align-items: center;
     
     text-align: left;
-
-    .label{
-
-    }
 
     .counter{
         width: 3rem;

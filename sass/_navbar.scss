@@ -17,7 +17,6 @@ body {
 .navbar{
     background-color: $background;
 
-
     display: grid;
     grid-template-rows: 5rem;
     grid-template-columns: auto 1fr repeat(5, 10rem) 3rem;
@@ -130,6 +129,10 @@ body {
     opacity: 100%;
     font-size: 1rem;
     padding: 0.1rem;
+
+    cursor: pointer;
+    text-decoration: none;
+
 
     margin-block: 0.2rem;
 
