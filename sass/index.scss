@@ -12,6 +12,7 @@ body {
 }
 
 .website-section{
+    position: relative;
     height: 85vh;
     padding: 1rem;
     background-color: $background;
@@ -32,21 +33,31 @@ body {
 
 //Our mission
 //What makes us unique
-#mission{
-    height: fit-content;
+#mission, #unique {
+    height: 30rem;
+
 }
 .simple_content{
-    margin-inline: 10rem;
-    margin-block: 1rem;
+    width: 80%;
+    position: absolute;
+    transform:translateX(-50%);
+    left:50%;
+
+    margin-block: 2rem;
+    
+
     display: flex;
     flex-direction: row;
 
     img{
-        width: 35%;
-        margin-right: 3rem;
+        width: 50%;
+        margin-inline: 2rem;
+
     }
     p{
+        margin-inline: 2rem;
         font-size: 1.5rem;
+        width: 50%;
     }
 
 }
