@@ -9,7 +9,7 @@ $event_width: 2rem;
 $trans_time: 0.25s;
 
 .entire_timeline{
-    margin-block: 5rem;
+    margin-block: 0rem;
 }
 
 
@@ -24,6 +24,8 @@ $trans_time: 0.25s;
 
     position: relative;
     z-index: 0;
+
+    margin-block: 4rem;
 }
 
 
@@ -144,10 +146,52 @@ $trans_time: 0.25s;
 }
 
 
-.descripters>p{
-    margin: 2rem;
+.journey_content{
+    margin-block: 2rem;
+    margin-inline: 5rem;
     display: none;
     &.active{
-        display: block;
+        display: grid;
     }
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 5rem 1fr;
+
+    column-gap: 2rem;
+
+    align-items: start;
+    justify-items: center;
+
+    h2{
+        font-size: 2rem;
+        text-transform: capitalize;
+    }
+
+    .date{
+        font-size: 1.2rem;
+
+        justify-self: center;
+
+        color: #aaa;
+
+        width: 100%;
+        position: relative;
+        transform: translateX(-50%);
+        left: calc(25rem);
+    }
+
+    img{
+        height: 15rem;
+        width: 25rem;
+    }
+
+    p{
+        align-self: center;
+
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+
+        padding: 1rem;
+    }
+
 }

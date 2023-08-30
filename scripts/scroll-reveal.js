@@ -61,10 +61,10 @@ $(document).ready(scroll_handler)
 
 
 
-
+// Runs when the dom is ready
 $(function(){
 	var inputs = $('.not_end');
-	var paras = $('.descripters').find('p');
+	var paras = $('.journey_content');
 
 	inputs.click(function(){
 		var t = $(this),
