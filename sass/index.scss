@@ -13,10 +13,12 @@ body {
 
 .website-section{
     position: relative;
-    height: 85vh;
     padding: 1rem;
     background-color: $background;
-    margin: 2rem;
+    
+    margin-block: 2rem;
+    margin-inline: 10vw;
+    
 
     scroll-margin-top: 5rem;
 
@@ -26,6 +28,7 @@ body {
     h1{
         text-decoration-thickness: 3px;
         font-size: 3rem;
+        margin-block: 2rem;
     }
 
     
@@ -34,56 +37,63 @@ body {
 //Our mission
 //What makes us unique
 #mission, #unique {
-    height: 30rem;
+    .simple_content{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
 
-}
-.simple_content{
-    width: 80%;
-    position: absolute;
-    transform:translateX(-50%);
-    left:50%;
+        img{
+            height: 20rem;
+            width: 50%;
+            margin-inline: 2rem;
 
-    margin-block: 2rem;
-    
-
-    display: flex;
-    flex-direction: row;
-
-    img{
-        width: 50%;
-        margin-inline: 2rem;
+        }
+        p{
+            margin-inline: 2rem;
+            font-size: 1.5rem;
+            width: 50%;
+        }
 
     }
-    p{
-        margin-inline: 2rem;
-        font-size: 1.5rem;
-        width: 50%;
-    }
-
 }
-
 //timeline
 @import '_timeline';
 
 
-//what we've done
-.counters{
-    margin-block: 3rem;
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
 
-    font-size: 2rem;
-    width: max-content;
 
-    justify-content: center;
-    align-items: center;
-    
-    text-align: left;
+//done_so_far
+#done_so_far{
+    .content{
+        display: grid;
+
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+
+        margin-inline: 15rem;
+
+    }
 
     .counter{
-        width: 3rem;
-        margin-left: 2rem;
+        align-self: start;
+        font-size: 2rem;
+
+    }
+
+    .label{
+        font-size: 2rem;
+        align-self: baseline;
+    }
+
+
+    .text{
+        margin-top: 2rem;
+
+        font-size: 1.4rem;
+        margin-inline: 10rem;
+        color: #aaa;
+
+        
     }
 }
 
@@ -93,27 +103,28 @@ body {
     height: fit-content;
     
 
-    .wrapper{
-        display: flex;
-        flex-wrap: wrap;
-        
-        position: absolute;
-        transform: translateX(-50%);
-        left: 50%;
-        
-        
-        justify-content: space-between;
-        align-items: center;
-        
-        margin-top: 3rem;
-        width: 75%;
-        height: 30rem;
+    .content{
+        display: grid;
+        grid-template-columns: 3;
+        grid-template-rows: 2;
 
+        row-gap: 5rem;
+        column-gap: 3rem;
+
+        justify-content: center;
+
+    }
+
+    .founder{
+        grid-column-start: span 3;
     }
 
     .idcard{
         display: flex;
         flex-direction: column; 
+        
+        justify-self: center;
+
         justify-content: start;
         align-items: center;
 
