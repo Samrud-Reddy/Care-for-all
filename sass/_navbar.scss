@@ -1,4 +1,4 @@
-$accentedText: #ffee71;
+$accentedText: #ccc;
 @import '_colors';
 
 
@@ -15,7 +15,7 @@ body {
 
 
 .navbar{
-    background-color: $background;
+    background-color: #161616;
 
     display: grid;
     grid-template-rows: 5rem;
@@ -81,7 +81,7 @@ body {
 
     &:focus{
         outline: none;
-        border: solid #666 4px;
+        border: solid #555 4px;
     }
 
     &:hover{
@@ -95,7 +95,7 @@ body {
     display: none;
     transform: translateX(50%);
 
-    background-color: $primary;
+    background-color: #363636;
     position: absolute;
     top: 4rem;
     right: 50%;
@@ -123,7 +123,7 @@ body {
 }
 
 .navbutton{
-    background-color: $primary;
+    background-color: #363636;
     color: $accentedText;
     border: none;
     opacity: 100%;
