@@ -16,7 +16,7 @@ body {
     padding: 1rem;
     background-color: $background;
     
-    margin-block: 2rem;
+    margin-block: 5rem;
     margin-inline: 10vw;
     
 
@@ -28,7 +28,9 @@ body {
     h1{
         text-decoration-thickness: 3px;
         font-size: 3rem;
-        margin-block: 2rem;
+        margin-block: 5rem;
+
+        font-weight: 550;
     }
 
     
@@ -70,31 +72,89 @@ body {
         grid-template-rows: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
 
-        margin-inline: 15rem;
+        margin-inline: 12rem;
 
     }
 
     .counter{
         align-self: start;
-        font-size: 2rem;
+        font-size: 4rem;
+
+        font-weight: 600;
+
+        &:after{
+            content: "+";
+        }
 
     }
 
     .label{
-        font-size: 2rem;
+        font-size: 2.5rem;
         align-self: baseline;
     }
 
 
     .text{
-        margin-top: 2rem;
-
         font-size: 1.4rem;
         margin-inline: 10rem;
         color: #aaa;
 
-        
+        margin-bottom: 2rem;
     }
+}
+
+//Collaborations
+#collaborations{
+    position: relative;
+    height: fit-content;
+
+    .content{
+        display:flex;
+
+        justify-content: center;
+        align-items: center;
+
+        flex-wrap: wrap;
+
+        row-gap: 4rem;
+
+    }
+
+    .idcard{
+        display: flex;
+        flex-direction: column; 
+        
+        justify-self: center;
+
+        justify-content: start;
+        align-items: center;
+
+        width: 24rem;
+
+        height: 100%;
+
+
+        h3{
+            font-size: 2.4rem;
+            margin-block: 1rem;
+
+            text-transform: capitalize;
+        }
+
+        
+        img{
+            width: 50%;
+            aspect-ratio: 1 / 1;
+        }
+
+
+        p{
+            margin-top: 1.5rem;
+            width: 70%;
+        }
+
+    }
+
 }
 
 //Our Team
@@ -102,6 +162,9 @@ body {
     position: relative;
     height: fit-content;
     
+    h1{
+        margin-bottom: 1rem;
+    }
 
     .content{
         display: grid;

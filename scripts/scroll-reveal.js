@@ -58,7 +58,7 @@ function scroll_handler(){
 $(document).ready(scroll_handler)
 
 
-
+$(document).scroll(scroll_handler)
 
 
 // Runs when the dom is ready
