@@ -176,6 +176,8 @@ body {
 
         justify-content: center;
 
+        margin-bottom: 5rem;
+
     }
 
     .founder{
@@ -222,4 +224,50 @@ body {
         }
 
     }
+
+    .volunteers{
+        margin-bottom: 20rem;
+        position: relative;
+
+        margin-inline: 10rem;
+    }
+
+    h2{
+        font-size: 2rem;
+        margin-bottom: 3rem;
+    }
+    
+    .volunteer{
+        display: none;
+
+
+        white-space: nowrap;
+        font-size: 2rem;
+        
+        height: 5rem;
+
+        transform: translateX(-50%);
+
+        overflow-x: hidden;
+    }
+
+    .active{
+        position: absolute;
+        display: block;        
+
+        animation: left-right 10s linear forwards;
+    }
+
+
+    @keyframes left-right {
+        from{
+            left: 0%;
+        }
+
+        to{
+            left: 100%;
+            display: none;
+        }
+    }
+
 }
