@@ -3,7 +3,7 @@ const height = $(".volunteer").height()
 
 //change in css
 const time_taken = 10 * 1000
-const interval = 4 * 1000
+const interval = 4 * 1000;
 
 var last_track = -1;
 function gen_track(elem){
@@ -45,12 +45,28 @@ function send_name(elem){
 
 
 let elem = get_random_elem()
-
 send_name(elem);
 
-setInterval(function() {
+function better_interval(callback, interval){
+    var end = Date.now() + interval;
+
+    setInterval(function() {
+        let time_left = end - Date.now()
+
+        if (time_left < 0){
+            let elem = get_random_elem()
+            send_name(elem);
+
+            end = Date.now() + interval;
+        }
+    }, 200)
+
+}
+
+better_interval(function() {
     let elem = get_random_elem()
-
     send_name(elem);
+}, interval);
 
-}, interval)
+
+
