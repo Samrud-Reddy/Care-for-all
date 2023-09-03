@@ -59,7 +59,7 @@ function better_interval(callback, interval){
 
             end = Date.now() + interval;
         }
-    }, 200)
+    }, 50)
 
 }
 

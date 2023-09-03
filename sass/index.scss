@@ -248,6 +248,8 @@ body {
 
         transform: translateX(-50%);
 
+        color: #aaa;
+
         overflow-x: hidden;
     }
 
@@ -260,12 +262,22 @@ body {
 
 
     @keyframes left-right {
-        from{
+        0%{
             left: 0%;
+            opacity: 0%;
         }
 
-        to{
+        5%{
+            opacity: 100%;
+        }
+
+        95%{
+            opacity: 100%;
+        }
+
+        100%{
             left: 100%;
+            opacity: 0%;
             display: none;
         }
     }
