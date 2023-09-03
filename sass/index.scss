@@ -314,12 +314,14 @@ footer{
         span{
             font-weight: 700;
         }
+
+        margin-bottom: 3rem;
     }
 
     .right{
         display: grid;
 
-        grid-template-rows: 2rem 1.6rem 1fr;
+        grid-template-rows: 2rem 1.6rem 1fr 3rem;
         grid-template-columns: 1fr 1fr;
 
         column-gap: 1rem;
@@ -329,19 +331,18 @@ footer{
         text-align: left;
     }
 
-    .form_wrapper{
-
-    }
-
     label[for=name], label[for=email], label[for=msg]{
         font-size: 1.2rem;
+
+        font-weight: 600;
+        color: #ccc;
     }
 
     input[type=text], input[type=email], textarea{
         outline: none;
         padding: 0.2rem;
 
-        background-color: #888;
+        background-color: #666;
         color: $background;
 
         border-radius: 0.3rem;
@@ -363,5 +364,36 @@ footer{
 
         padding: 0.4rem;
         resize: none;
+        
+        &::placeholder{
+            color: #000;
+        }
+    }
+
+    input[type=submit]{
+        text-transform: uppercase;
+
+        justify-self: center;
+        align-self: center;
+        grid-column: span 2;
+
+        background-color: $background;
+        color: #ccc;
+        font-weight: 600;
+
+        border: none;
+        border-radius: 0.4rem;
+
+        height: 1.8rem;
+
+        font-size: 1.3rem;
+
+        padding-inline: 0.2rem;
+
+        &:hover{
+            cursor: pointer;
+            opacity: 80%;
+        }
+
     }
 }
