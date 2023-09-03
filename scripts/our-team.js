@@ -51,15 +51,22 @@ function better_interval(callback, interval){
     var end = Date.now() + interval;
 
     setInterval(function() {
-        let time_left = end - Date.now()
+        if (document.visibilityState != "hidden"){
+            $(".volunteer").css("animation-play-state", "running");
 
-        if (time_left < 0){
-            let elem = get_random_elem()
-            send_name(elem);
+            let time_left = end - Date.now()
 
-            end = Date.now() + interval;
+            if (time_left < 0){
+                callback()
+
+                end = Date.now() + interval;
+            }
         }
-    }, 50)
+        else{
+            $(".volunteer").css("animation-play-state", "paused");
+        }
+
+    }, 100)
 
 }
 
@@ -67,6 +74,4 @@ better_interval(function() {
     let elem = get_random_elem()
     send_name(elem);
 }, interval);
-
-
 
