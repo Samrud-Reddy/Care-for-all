@@ -134,7 +134,7 @@ body {
         height: 100%;
 
 
-        h3{
+        h2{
             font-size: 2.4rem;
             margin-block: 1rem;
 
@@ -198,7 +198,7 @@ body {
         height: 100%;
 
 
-        h3{
+        h2{
             font-size: 1.5rem;
             margin-block: 0.5rem;
         }
@@ -307,15 +307,35 @@ footer{
         text-align: start;
 
         font-size: 1.2rem;
-        gap: 1rem;
+        gap: 1.6rem;
 
         margin-inline: 10rem;
+        
+        a{
+           &:link, &:visited{
+            color: #88f;
+           }
+
+           &:hover, &:active{
+            color: #66a;
+           }
+        }
 
         span{
             font-weight: 700;
+            position: relative;
+            img{
+                position: absolute;
+                top: 50%;
+                right: 100%;
+                transform: translateY(-50%);
+
+                height: 2rem;
+                margin-inline: 0.5ch;
+            }
         }
 
-        margin-bottom: 3rem;
+        // margin-bottom: 3rem;
     }
 
     .right{
@@ -342,8 +362,8 @@ footer{
         outline: none;
         padding: 0.2rem;
 
-        background-color: #666;
-        color: $background;
+        background-color: #888;
+        color: black;
 
         border-radius: 0.3rem;
         border: none;
@@ -394,7 +414,7 @@ footer{
 
         &:hover{
             cursor: pointer;
-            opacity: 80%;
+            opacity: 60%;
         }
 
     }
