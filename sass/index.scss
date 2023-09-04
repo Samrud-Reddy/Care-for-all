@@ -295,7 +295,7 @@ footer{
 
         align-items: center;
 
-        column-gap: 10rem;
+        column-gap: 8rem;
 
     }
 
@@ -306,7 +306,7 @@ footer{
 
         justify-self: end;
 
-        grid-template-rows: 3rem 3rem 3rem;
+        grid-template-rows: 3rem 3rem 5rem;
         grid-template-columns: 2rem repeat(3, 0.4fr);
         
         align-content: center;
@@ -334,9 +334,9 @@ footer{
             font-weight: 700;
             height: 2rem;
             img{
-                height: 2rem;
+                height: 2.4rem;
                 margin-inline: 0.5ch;
-            
+                            
                 &:hover{
                     opacity: 60%;
                     cursor: pointer;
