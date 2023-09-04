@@ -91,13 +91,11 @@ $trans_time: 0.25s;
     position: absolute;
 
     width: max-content;
-
+    transition: all $trans_time ease-out;
 }
 
 .not_end:hover > span::before{
     font-size: 1.2rem;
-    transition: all $trans_time ease-out;
-
 }
 
 .event:first-child span::before {
@@ -135,9 +133,9 @@ $trans_time: 0.25s;
     display: block;
     border-radius: 50%;
     background-color: inherit;
-    
+
+    transition: all $trans_time ease-out;
     &:hover{
-        transition: all $trans_time ease-out;
         cursor: pointer;
         width: calc($event_width * 1.2);
         height: calc($event_width * 1.2);
