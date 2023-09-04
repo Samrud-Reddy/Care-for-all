@@ -289,10 +289,14 @@ footer{
         margin-bottom: 3rem !important;
     }
     .content{
-        display: flex;
-        flex-direction: row;
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
 
         align-items: center;
+
+        column-gap: 10rem;
+
     }
 
 
@@ -300,8 +304,12 @@ footer{
     .left{
         display: grid;
 
+        justify-self: end;
+
         grid-template-rows: 3rem 3rem 3rem;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 2rem repeat(3, 0.4fr);
+        
+        align-content: center;
 
 
         color: #aaa;
@@ -309,12 +317,10 @@ footer{
 
         font-size: 1.2rem;
 
-        margin-inline: 10rem;
-
         align-items: center;
         
         .big{
-            grid-column: span 3;
+            grid-column: span 4;
             display: flex;
             align-items: center;
 
@@ -338,7 +344,7 @@ footer{
             }
         }
 
-        // margin-bottom: 3rem;
+        margin-bottom: 3rem;
     }
 
     .right{
