@@ -328,9 +328,13 @@ footer{
             font-weight: 700;
             height: 2rem;
             img{
-
                 height: 2rem;
                 margin-inline: 0.5ch;
+            
+                &:hover{
+                    opacity: 60%;
+                    cursor: pointer;
+                }
             }
         }
 
