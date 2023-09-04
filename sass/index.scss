@@ -295,40 +295,39 @@ footer{
         align-items: center;
     }
 
-    .content>div{
-        flex: 1 1 0;
-    }
+
 
     .left{
-        display: flex;
-        flex-direction: column;
+        display: grid;
+
+        grid-template-rows: 3rem 3rem 3rem;
+        grid-template-columns: 1fr 1fr 1fr;
+
 
         color: #aaa;
         text-align: start;
 
         font-size: 1.2rem;
-        gap: 1.6rem;
 
         margin-inline: 10rem;
-        
-        a{
-           &:link, &:visited{
-            color: #88f;
-           }
 
-           &:hover, &:active{
-            color: #66a;
-           }
+        align-items: center;
+        
+        .big{
+            grid-column: span 3;
+            display: flex;
+            align-items: center;
+
+        }
+
+        &>div:not(.big){
+            justify-self: center;
         }
 
         span{
             font-weight: 700;
-            position: relative;
+            height: 2rem;
             img{
-                position: absolute;
-                top: 50%;
-                right: 100%;
-                transform: translateY(-50%);
 
                 height: 2rem;
                 margin-inline: 0.5ch;
@@ -362,7 +361,7 @@ footer{
         outline: none;
         padding: 0.2rem;
 
-        background-color: #888;
+        background-color: #fff;
         color: black;
 
         border-radius: 0.3rem;
