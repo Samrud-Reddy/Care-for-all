@@ -2,36 +2,14 @@
 
 
 $width-carasel: calc(90vw - 7rem);
-body{
-    font-family: 'Montserrat', sans-serif;
-    scrollbar-width: auto;
-    scrollbar-color: $background $text;
-}
 
-body {
-    background-color: $background;
-    color: $text;
-}
 
-::-webkit-scrollbar {
-  width: 8px;
-}
 
-/* Track */
-::-webkit-scrollbar-track {
-  background: $background;
-}
+.carasoul-section{
+    position: relative;
+    height: calc(85vh - 5rem);
+    margin-top: 2rem;
 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: $primary;
-    border-radius: 5px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: $accent;
-}
 
 .carasel{
     height: 100%;
@@ -71,13 +49,6 @@ body {
     }
 }
 
-
-
-.carasoul-section{
-    position: relative;
-    height: calc(85vh - 5rem);
-    margin-top: 2rem;
-}
 
 
 
@@ -133,4 +104,5 @@ body {
 
 .selected{
     background-color: $background;
+}
 }

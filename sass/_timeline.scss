@@ -76,9 +76,18 @@ $trans_time: 0.25s;
     background-color: #AEB6BF;
 }
 
-.event span::before {
-    content: attr(data-info);
 
+.event:not(.not_end) span::before{
+    content: attr(data-info);
+}
+
+.not_end span::before {
+    content: attr(data-info) '\a' attr(data-year);
+
+    white-space: pre;
+}
+
+.event span::before {
     font-size: 1rem;
 
     transform: translate(-50%, -50%);
@@ -113,11 +122,11 @@ $trans_time: 0.25s;
 }
 
 .not_end:nth-child(odd) span::before {
-    top: calc(100% + 1rem);
+    top: calc(100% + 1.4rem);
 }
 
 .not_end:nth-child(even) span::before {
-    top: calc(0% - 1rem);
+    top: calc(0% - 1.4rem);
 
 }
 

@@ -2,7 +2,7 @@ const len = $(".volunteer").length
 const height = $(".volunteer").height()
 
 //change in css
-const time_taken = 10 * 1000
+const time_taken = 8 * 1000
 const interval = 4 * 1000;
 
 var last_track = -1;
