@@ -16,6 +16,8 @@ app.use("*/scripts", express.static(path.join(__dirname, "scripts")));
 // 	next();
 // });
 
+
+//Gets number of caresel files
 const pathToDirectory = './static/img carasoul';
 var number_of_images_in_carasel = 4
 
@@ -30,6 +32,10 @@ fs.readdir(pathToDirectory, (error, files) => {
 
 app.get('/', (req, res) => {
   res.render('index.ejs', {images: number_of_images_in_carasel})
+})
+
+app.get('/volunteer', (req, res) => {
+  res.render('volunteer.ejs')
 })
 
 

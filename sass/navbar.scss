@@ -75,6 +75,11 @@ body {
         font-size: 1.3rem;
         cursor: pointer;
         color: white;
+
+        a{
+            color: inherit;
+            text-decoration: inherit;
+        }
     }
 
 
@@ -145,3 +150,4 @@ body {
     }
 
 }
+

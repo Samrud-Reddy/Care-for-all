@@ -1,0 +1,29 @@
+@import '_colors';
+body{
+    font-family: 'Montserrat', sans-serif;
+
+    overflow-x: hidden;
+
+    background-color: $background;
+    color: $text;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $background;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $primary;
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $accent;
+}
