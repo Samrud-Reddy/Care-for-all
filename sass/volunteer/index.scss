@@ -1,27 +1,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import '../_colors';
 
 .first{
     font-weight: 600;
     font-size: 3rem;
     margin-top: 3rem;
-    margin-bottom: 1.4rem;
+    margin-bottom: 1rem;
 
 }
 
 h1{
-    
     font-size: 2.8rem;
+    color: #aaa;
 
+    margin-bottom: 3rem;
     width: min(40ch, 80%);
     margin-inline: auto;
-    margin-bottom: 5rem;
 
-    font-weight: 400;
+    font-weight: 300;
 
     text-align: center;
 }
 
+.button_wrapper{
+    height: 7rem;
+    width: 100%;
+    margin-inline: auto;
+    text-align: center;
+    margin-bottom: 5rem;
 
+    .submit_button {
+        background-color: $background;
+        font-weight: 600;
+        font-size: 3.0rem;
+        color: white;
+        border: none;
+        border-radius: 7px;
+    
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+}
 section{
     text-align: center;
     
@@ -36,6 +56,7 @@ section{
         font-family: 'Poppins', sans-serif;
         font-weight: 700;
     }
+
 }
 
 
@@ -47,6 +68,10 @@ section{
 
     &:first-of-type{
         margin-top: 2rem;
+    }
+
+    &:last-of-type{
+        margin-bottom: 4rem;
     }
 
     h3{
@@ -74,4 +99,5 @@ section{
             }
         }
     }
+
 }
