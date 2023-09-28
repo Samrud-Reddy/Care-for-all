@@ -38,7 +38,9 @@ app.get('/volunteer', (req, res) => {
   res.render('volunteer.ejs')
 })
 
-
+app.get('/fundraise', (req, res) => {
+  res.render('fundraising.ejs')
+})
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
