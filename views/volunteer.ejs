@@ -26,25 +26,25 @@
     <h1>and become a volunteer for our<br>upcoming medical and awareness camps</h1>
     <section>
         <h2>Our upcomming camps</h2>
-        <div class="event">
-            <h3>Ramaiaha</h3>
-            <div class="label"><span>Date:-</span>17-06-2023</div>
-            <div class="label"><span>Time:-</span>5:00 pm</div>
-            <div class="label"><span>Venue:-</span>14/1, Kodigehalli Main Rd, CQAL Layout, Sahakara Nagar</div>
-            <div class="label"><span>Venue link:-</span><a href="https://goo.gl/maps/ogYzNMCUu1Xh2KGa9" target="_blank">https://goo.gl/maps/ogYzNMCUu1Xh2KGa9</a></div>
-            <div class="label"><span>Description:-</span>A good camp for would be doctors</div>
-        </div>
 
-        <div class="event">
-            <h3>Random NGO</h3>
-            <div class="label"><span>Date:-</span>12-08-2023</div>
-            <div class="label"><span>Time:-</span>3:00 pm</div>
-            <div class="label"><span>Venue:-</span>33rd Main Rd, MG Layout, JP Nagar VI Phase, J P Nagar</div>
-            <div class="label"><span>Venue link:-</span><a href="https://goo.gl/maps/ogYzNMCUu1Xh2KGa9" target="_blank">https://goo.gl/maps/ogYzNMCUu1Xh2KGa9</a></div>
-            <div class="label"><span>Description:-</span>A good camp for would be lawyers</div>
-        </div>
-    
-    <div class="button_wrapper"><button class="submit_button">Voulnteer<br>Now!</button></div>
+        <%- include('partials/event', {
+            event: "Rammaiha",
+            date: "17-06-2023",
+            time: "5:00 pm",
+            venue: "14/1, Kodigehalli Main Rd, CQAL Layout, Sahakara Nagar",
+            venue_link: "https://goo.gl/maps/ogYzNMCUu1Xh2KGa9",
+            description: "A good camp for would be doctors,"
+        }) %>
+
+        <%- include('partials/event', {
+            event: "Samrthanam",
+            date: "12-08-2023",
+            time: "3:00 pm",
+            venue: "33rd Main Rd, MG Layout, JP Nagar VI Phase, J P Nagar",
+            venue_link: "https://goo.gl/maps/ogYzNMCUu1Xh2KGa9",
+            description: "A good camp for would be lawyers",
+
+        }) %>
     </section>
     <%- include('partials/footer') %>
 </body>

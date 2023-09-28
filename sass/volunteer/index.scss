@@ -2,10 +2,12 @@
 @import '../_colors';
 
 .first{
+    color: white;
+
     font-weight: 600;
     font-size: 3rem;
     margin-top: 3rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.2rem;
 
 }
 
@@ -13,7 +15,7 @@ h1{
     font-size: 2.8rem;
     color: #aaa;
 
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
     width: min(40ch, 80%);
     margin-inline: auto;
 
@@ -22,26 +24,6 @@ h1{
     text-align: center;
 }
 
-.button_wrapper{
-    height: 7rem;
-    width: 100%;
-    margin-inline: auto;
-    text-align: center;
-    margin-bottom: 5rem;
-
-    .submit_button {
-        background-color: $background;
-        font-weight: 600;
-        font-size: 3.0rem;
-        color: white;
-        border: none;
-        border-radius: 7px;
-    
-        &:hover {
-            opacity: 0.6;
-        }
-    }
-}
 section{
     text-align: center;
     
@@ -54,24 +36,22 @@ section{
         text-transform: capitalize;
 
         font-family: 'Poppins', sans-serif;
+        letter-spacing: 0.1rem;
         font-weight: 700;
     }
 
 }
 
-
 .event{
     text-align: start;
-
-    margin-inline: 20rem;
     margin-block: 5rem;
+
+    display: grid;
+    justify-content: center;
+
 
     &:first-of-type{
         margin-top: 2rem;
-    }
-
-    &:last-of-type{
-        margin-bottom: 4rem;
     }
 
     h3{
@@ -83,15 +63,23 @@ section{
     }
 
     .label{
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         margin-block: 0.3rem;
 
-        span{
-            display: inline-block;
+        display: flex;
+        transform: translateX(5%);
+
+
+        .left{
             font-weight: 600;
-            width: 11ch;
+            flex-shrink: 0;
+            width: 12ch;
         }
 
+        .right{
+            text-align: left;
+            color: #ccc;
+        }
         a{
             color: #009fff;
             &:hover{
@@ -99,5 +87,21 @@ section{
             }
         }
     }
+    
+   .submit{
+        transform: translateX(-50%);
+        margin-left: 50%;
+        margin-top: 0.5rem;
 
+        font-size: 2rem;
+        font-weight: 900;
+        letter-spacing: 0.1rem;
+        background-color: inherit;
+        border: none;
+        color: white;
+
+        &:hover {
+            opacity: 0.5;
+        }
+   } 
 }
