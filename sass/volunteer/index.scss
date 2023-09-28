@@ -105,3 +105,22 @@ section{
         }
    } 
 }
+
+.why_us{
+    color: white;
+
+    font-weight: 600;
+    font-size: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 0.2rem;
+}
+
+.why_us_p{
+    width: min(65ch, 90%);
+    margin-inline: auto;
+    margin-block: 2rem;
+
+    text-align: center;
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+}
