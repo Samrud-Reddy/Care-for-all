@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found</title>
+
+    <%- include('partials/navbar') %>
+</head>
+<body>
+
+    <div class="h-container">
+        <h1>ERROR 404!</h1>
+        <h2>Go Back To The Home Page</h2>
+    </div>
+
+    <style>
+        .h-container{
+            position: absolute;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 50%;
+            text-align: center;
+        }
+
+        h1{
+            margin: 2rem;
+            font-size: 4rem;
+        }
+
+        h2{
+            font-size: 2.5rem;
+            color: #ccc;
+        }
+
+        body{
+            font-family: 'Montserrat', sans-serif;
+
+            overflow-x: hidden;
+
+            background-color: #161613;
+            color: white;
+        }
+    </style>
+</body>
+</html>

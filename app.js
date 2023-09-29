@@ -38,7 +38,10 @@ app.get('/volunteer', (req, res) => {
   res.render('volunteer.ejs')
 })
 
-
+app.use((req, res) => {
+  res.status(404)
+  res.render("pagenotfound.ejs")
+})
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
