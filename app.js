@@ -38,6 +38,10 @@ app.get('/volunteer', (req, res) => {
   res.render('volunteer.ejs')
 })
 
+app.get('/fundraise', (req, res) => {
+  res.render('fundraising.ejs')
+})
+
 app.use((req, res) => {
   res.status(404)
   res.render("pagenotfound.ejs")
