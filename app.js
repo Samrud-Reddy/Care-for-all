@@ -39,11 +39,11 @@ app.get('/volunteer', (req, res) => {
 })
 
 app.get('/fundraise', (req, res) => {
-  res.render('fundraising.ejs')
+  res.render('donate.ejs')
 })
 
 app.get('/donate', (req, res) => {
-  res.render('donate.ejs')
+  res.render('KETTO LINK')
 })
 
 app.use((req, res) => {

@@ -8,8 +8,8 @@ body{
 h1{
     margin-block: 3rem;
     margin-inline: 12rem;
-    font-size: 2rem;
-    line-height: 2.5rem;
+    font-size: 1.9rem;
+    line-height: 3rem;
 
     font-weight: 400;
 }
@@ -18,7 +18,9 @@ h2{
     margin-block: 1rem;
     margin-inline: 10rem;
     font-size: 1.4rem;
-    line-height: 1.6rem;
+    line-height: 2rem;
+
+    font-weight: 400;
 }
 
 ul{
@@ -28,10 +30,26 @@ ul{
     transform: translateX(-2ch);
 
     li{
-        margin-block: 2rem;
-        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-block: 8rem;
+        p {
+            font-size: 1.4rem;
+            line-height: 2rem;
+            padding-inline: 4rem;
+        }
+        img {
+            width: 50%;
+        }
+
+        &:nth-child(even){
+            flex-direction: row-reverse;
+        }
     }
+
 }
+
 
 h3{
     margin-block: 3rem;
@@ -40,7 +58,7 @@ h3{
 .donate {
     padding: 1rem;
     font-size: 2rem;
-    background-color: #333;
+    background-color: $background;
     border: none;
     border-radius: 1rem;
     color: white;

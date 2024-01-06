@@ -3,13 +3,13 @@
 footer{
     width: 100vw;
     margin-block-start: 10rem;
-    padding-block: 2rem;
     margin-inline: 0px;
-    border-top: 5px white solid;
+    border-top: 2px white solid;
 
 
     h1{
         text-align: center;
+        margin-block: 1rem;
         margin-bottom: 3rem;
     }
 
@@ -87,6 +87,11 @@ footer{
         text-align: left;
     }
 
+    .form_wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
     label[for=name], label[for=email], label[for=msg]{
         font-size: 1.2rem;
 
@@ -98,11 +103,12 @@ footer{
         outline: none;
         padding: 0.2rem;
 
-        background-color: #fff;
-        color: black;
-
         border-radius: 0.3rem;
-        border: none;
+        border: #ccc 2px solid;
+
+        background-color: $background;
+        color: white;
+
     }
 
     label[for=msg]{
@@ -124,7 +130,7 @@ footer{
         font-size: 1.1rem;
         
         &::placeholder{
-            color: #000;
+            color: white;
         }
     }
 

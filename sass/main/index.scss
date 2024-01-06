@@ -34,27 +34,25 @@
 
 
         img{
-            height: 18rem;
-            width: 35%;
             margin-inline: 2rem;
+            aspect-ratio: auto;
+            width: 40rem;
 
         }
         p{
             font-size: 1.3rem;
-            line-height: 1.5rem;
+            line-height: 2rem;
             font-weight: 300;
             
             color: #ccc;
             
             margin-inline: 2rem;
-            width: 65%;
         }
 
     }
 }
 //timeline
 @import '_timeline';
-
 
 
 
@@ -123,22 +121,23 @@
         justify-content: start;
         align-items: center;
 
-        width: 24rem;
+        width: 25rem;
 
         height: 100%;
 
 
         h2{
             font-size: 2.4rem;
-            margin-block: 1rem;
+            height: 7rem;
+            line-height: 3rem;
 
             text-transform: capitalize;
         }
 
         
         img{
-            width: 50%;
-            aspect-ratio: 1 / 1;
+            height: 5rem;
+            aspect-ratio: auto;
         }
 
 
@@ -223,7 +222,7 @@
         margin-bottom: 10rem;
         position: relative;
 
-        margin-inline: 15rem;
+        margin-inline: 5rem;
     }
 
     h2{
@@ -239,6 +238,8 @@
         font-size: 2rem;
         
         height: 5rem;
+
+        margin-inline: 5rem;
 
         transform: translateX(-50%);
 
