@@ -102,18 +102,13 @@
     height: fit-content;
 
     .content{
-        display:flex;
+        display: grid;
 
-        justify-content: center;
-        align-items: center;
-
-        flex-wrap: wrap;
-
-        row-gap: 4rem;
-
+        grid-template-columns: 1fr 1fr;
+        row-gap: 2rem;
     }
 
-    .idcard{
+    .collab-idcard{
         display: flex;
         flex-direction: column; 
         
@@ -137,7 +132,7 @@
 
         
         img{
-            height: 5rem;
+            height: 10rem;
             aspect-ratio: auto;
         }
 
@@ -165,8 +160,7 @@
         grid-template-columns: 3;
         grid-template-rows: 2;
 
-        row-gap: 5rem;
-        column-gap: 3rem;
+        row-gap: 2rem;
 
         justify-content: center;
 
@@ -187,7 +181,7 @@
         justify-content: start;
         align-items: center;
 
-        width: 15rem;
+        width: 30rem;
 
         height: 100%;
 
@@ -199,13 +193,12 @@
 
         
         img{
-            width: 80%;
+            width: 12rem;
             aspect-ratio: 1 / 1;
             border-radius: 50%;
         }
 
         .title{
-            text-transform: uppercase;
             color: #888;
             margin  : 0.5rem;
             font-size: 1rem;
@@ -215,6 +208,10 @@
         p{
             margin-top: 1rem;
             width: 80%;
+            font-weight: 300;
+            font-size: 1rem;
+            line-height: 1.4rem;
+            color: #fff;
         }
 
     }
