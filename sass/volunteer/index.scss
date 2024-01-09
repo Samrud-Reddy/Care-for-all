@@ -15,7 +15,7 @@ h1{
     font-size: 2.4rem;
     color: #aaa;
 
-    margin-bottom: 4rem;
+    margin-bottom: 7rem;
     width: min(40ch, 80%);
     margin-inline: auto;
 
@@ -30,14 +30,20 @@ section{
     margin-inline: 5rem;
     
 
+    p {
+        margin-block: 2rem;
+        font-size: 1.3rem;
+        line-height: 2rem;
+        color: #ccc ;
+    }
 
     h2{
-        font-size: 2.4rem;
-        text-transform: capitalize;
+        color: white;
 
-        font-family: 'Poppins', sans-serif;
-        letter-spacing: 0.1rem;
-        font-weight: 700;
+        font-weight: 500;
+        font-size: 3rem;
+        margin-top: 10rem;
+        margin-bottom: 0.2rem;
     }
 
 }
@@ -109,9 +115,9 @@ section{
 .why_us{
     color: white;
 
-    font-weight: 400;
+    font-weight: 500;
     font-size: 3rem;
-    margin-top: 3rem;
+    margin-top: 10rem;
     margin-bottom: 0.2rem;
 }
 
@@ -123,4 +129,6 @@ section{
     text-align: center;
     font-size: 1.3rem;
     line-height: 1.8rem;
+
+    color: #ccc;
 }
