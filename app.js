@@ -39,7 +39,7 @@ app.get('/volunteer', (req, res) => {
 })
 
 app.get('/fundraise', (req, res) => {
-  res.render('donate.ejs')
+  res.render('fundraise.ejs')
 })
 
 app.get('/donate', (req, res) => {
