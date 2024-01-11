@@ -67,7 +67,7 @@ app.post('/contact', (req, res) => {
 
   var mailOptions = {
     from: process.env.GMAIL,
-    to: 'careforall1000plus@gmail.com',
+    to: process.env.GMAIL,
     subject: 'Feedback from website',
     text: msg_to_send
   };
@@ -80,7 +80,6 @@ app.post('/contact', (req, res) => {
       console.log('Email sent: ' + info.response);
     }
   });
-
   res.sendStatus(200)
 })
 

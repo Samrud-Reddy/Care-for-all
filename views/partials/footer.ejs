@@ -11,27 +11,32 @@
             <div><span><a target="_blank" href="https://twitter.com/Careforall1000"><img src="files/icons/twitter.png" alt="icon"></a></span></div>
         </div>
         <script>
+            function clear() {
+                document.getElementById("name").value = ""
+                document.getElementById("email").value = ""
+                document.getElementById("msg").value = ""
+            }
             function submitForm() {
-                name = $("#name")
-                email = $("#email")
-                msg = $("#msg")
+                let name = document.getElementById("name")
+                let email = document.getElementById("email")
+                let msg = document.getElementById("msg")
 
-                endpoint = "/contact"
-
+                let endpoint = "/contact"
                 fetch(endpoint, {
                     method: "POST",
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
-                        name: name.val(),
-                        email: email.val(),
-                        msg: msg.val(),
-                    })
-                })
-
-                name.val("")
-                email.val("")
-                msg.val("")
-                alert("Email Sent")
+                        name: name.value,
+                        email: email.value,
+                        msg: msg.value,
+                    }),
+                    followRedirects: false
+                }).then((res) => {
+                    if (res.ok) {
+                        clear()
+                        alert("Email sent")
+                    }
+                }) 
             }
         </script>
         <form class="right" action="/contact" method="post" onsubmit="submitForm();return false">
