@@ -10,19 +10,38 @@
             <div><span><a target="_blank" href="https://www.youtube.com/@CareForAll_1000"><img src="files/icons/youtube.png" alt="icon"></a></span></div>
             <div><span><a target="_blank" href="https://twitter.com/Careforall1000"><img src="files/icons/twitter.png" alt="icon"></a></span></div>
         </div>
-        <form class="right">
+        <script>
+            function submitForm() {
+                name = $("#name").val()
+                email = $("#email").val()
+                msg = $("#msg").val()
+
+                endpoint = "/contact"
+
+                fetch(endpoint, {
+                    method: "POST",
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        name: name,
+                        email: email,
+                        msg: msg,
+                    })
+                })
+            }
+        </script>
+        <form class="right" action="/contact" method="post" onsubmit="submitForm();return false">
             <div class="form_wrapper">
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name">
+                <input type="text" id="name" name="name" required>
             </div>
 
             <div class="form_wrapper">
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email">
+                <input type="email" id="email" name="email" required>
             </div>
 
             <label for="msg"></label>
-            <textarea id="msg" name="msg" rows="4" placeholder="Enter Your Message Here"></textarea>
+            <textarea id="msg" name="msg" rows="4" placeholder="Enter Your Message Here" required></textarea>
 
             <input type="submit" value="Submit">
         </form>

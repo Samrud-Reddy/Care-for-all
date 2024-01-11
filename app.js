@@ -10,6 +10,9 @@ app.use("*/styles", express.static(path.join(__dirname, "styles")));
 app.use("*/files", express.static(path.join(__dirname, "static")));
 app.use("*/scripts", express.static(path.join(__dirname, "scripts")));
 
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }));
+
 // !debug
 // app.use((req, res, next) => {
 // 	console.log(req.url);
@@ -44,6 +47,11 @@ app.get('/fundraise', (req, res) => {
 
 app.get('/donate', (req, res) => {
   res.redirect('https://www.ketto.org/fundraiser/providing-healthcare-and-awareness-to-1000-underprivileged-children?utm_medium=copy&utm_content=d6ae5353cc5b9b9003e5d7f6c894b895&shby=1&utm_source=external_Ketto&utm_campaign=providing-healthcare-and-awareness-to-1000-underprivileged-children')
+})
+
+app.post('/contact', (req, res) => {
+  console.log(req.body)
+  res.sendStatus(200)
 })
 
 app.use((req, res) => {
