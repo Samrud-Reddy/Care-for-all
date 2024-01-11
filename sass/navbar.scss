@@ -18,7 +18,7 @@ body {
 
     display: grid;
     grid-template-rows: 5rem;
-    grid-template-columns: auto 1fr repeat(5, 10rem) 3rem;
+    grid-template-columns: auto 1fr auto;
 
     
     justify-content: center;
@@ -29,11 +29,19 @@ body {
     position: fixed;
     top: 0;
     z-index: 10;
-
+    
     width: 100vw;
     height: 5rem;
 
+    padding-right: 1rem;
+
     border-bottom: white 2px solid;
+}
+
+.nav_buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
 }
 
 
