@@ -12,9 +12,9 @@
         </div>
         <script>
             function submitForm() {
-                name = $("#name").val()
-                email = $("#email").val()
-                msg = $("#msg").val()
+                name = $("#name")
+                email = $("#email")
+                msg = $("#msg")
 
                 endpoint = "/contact"
 
@@ -22,11 +22,16 @@
                     method: "POST",
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
-                        name: name,
-                        email: email,
-                        msg: msg,
+                        name: name.val(),
+                        email: email.val(),
+                        msg: msg.val(),
                     })
                 })
+
+                name.val("")
+                email.val("")
+                msg.val("")
+                alert("Email Sent")
             }
         </script>
         <form class="right" action="/contact" method="post" onsubmit="submitForm();return false">
