@@ -40,17 +40,12 @@
             }
         </script>
         <form class="right" action="/contact" method="post" onsubmit="submitForm();return false">
-            <div class="form_wrapper">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-            </div>
+            <label for="name">Name:</label>
+            <label for="email">Email:</label>
 
-            <div class="form_wrapper">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
+            <input type="text" id="name" name="name" required>
+            <input type="email" id="email" name="email" required>
 
-            <label for="msg"></label>
             <textarea id="msg" name="msg" rows="4" placeholder="Enter Your Message Here" required></textarea>
 
             <input type="submit" value="Submit">
