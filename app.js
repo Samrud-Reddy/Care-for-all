@@ -1,9 +1,13 @@
 const express = require('express')
 const path = require("path")
+var nodemailer = require('nodemailer');
+const fs = require('fs');
+const { text } = require('body-parser');
+require('dotenv').config()
+
 const app = express()
 const port = 5000
 
-const fs = require('fs')
 
 app.set('view engine', 'ejs')
 app.use("*/styles", express.static(path.join(__dirname, "styles")));
@@ -49,8 +53,34 @@ app.get('/donate', (req, res) => {
   res.redirect('https://www.ketto.org/fundraiser/providing-healthcare-and-awareness-to-1000-underprivileged-children?utm_medium=copy&utm_content=d6ae5353cc5b9b9003e5d7f6c894b895&shby=1&utm_source=external_Ketto&utm_campaign=providing-healthcare-and-awareness-to-1000-underprivileged-children')
 })
 
+var transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: process.env.GMAIL,
+    pass: process.env.GMAIL_PWD
+  }
+});
+
 app.post('/contact', (req, res) => {
-  console.log(req.body)
+  msg_to_send = "Feedback from " + req.body.name + " with email " + req.body.email
+  msg_to_send = msg_to_send + "\n\n" + req.body.msg
+
+  var mailOptions = {
+    from: process.env.GMAIL,
+    to: 'careforall1000plus@gmail.com',
+    subject: 'Feedback from website',
+    text: msg_to_send
+  };
+
+  transporter.sendMail(mailOptions, function(error, info){
+    if (error) {
+      console.log(error);
+      console.log("ssdihdss")
+    } else {
+      console.log('Email sent: ' + info.response);
+    }
+  });
+
   res.sendStatus(200)
 })
 
