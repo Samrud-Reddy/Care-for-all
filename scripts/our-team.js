@@ -9,11 +9,15 @@ function truncate(text) {
 }
 
 function collapse(e) {
-    description = $(e.target)
+    if (e instanceof jQuery) {
+        description = e
+    } else {
+        description = $(e.target)
+    }
 
     text = description.attr("text")
-    
-    description.text(truncate(text))
+    // description.text(truncate(text))
+    description.text("")
     
     img = $("<img>", { src: "files/3-white-dots.png", class: "dots" });
 
@@ -33,14 +37,7 @@ function init_idcard(idcard) {
     description = idcard.find(".discription")
     description.attr("text", description.text())
 
-    text = description.attr("text")
-    
-    description.text(truncate(text))
-    
-    img = $("<img>", { src: "files/3-white-dots.png", class: "dots" });
-
-    description.append(img)
-
+    collapse(description)
 }
 
 
