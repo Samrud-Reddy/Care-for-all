@@ -1,76 +1,55 @@
-const height = $(".volunteer").height()
+function truncate(text) {
+    // split = text.split(".", 1)
+    // out = split[0] + "."
 
-//change in css
-const time_taken = 8 * 1000
-const interval = 1 * 1000;
+    out = text.split(" ", 20)
+    out = out.join(" ")
 
-var last_track = -1;
-function gen_track(elem){
-    let track = Math.floor(Math.random() * 3)
-
-    if (track == last_track){
-        track = gen_track(elem);
-    }
-
-    last_track = track
-    return track;
+    return out
 }
 
-function get_random_elem(){
-    var inactiveDivs =  $(".volunteer:not(.active)");
+function collapse(e) {
+    description = $(e.target)
 
-    if (inactiveDivs.length == 0){
-        return -1;
-    }
+    text = description.attr("text")
+    
+    description.text(truncate(text))
+    
+    img = $("<img>", { src: "files/3-white-dots.png", class: "dots" });
 
-
-
-    var randomIndex = Math.floor(Math.random() * inactiveDivs.length);
-
-    var randomInactiveDiv = inactiveDivs.eq(randomIndex);
-    return randomInactiveDiv;
+    description.append(img)
 }
 
-// function remove_active(){
-//     $(".volunteer").removeClass("active");
-// }
+function expand(e) {
 
-function send_name(elem){
-    elem.css({ top: gen_track(elem)*height+"px" });
-    elem.addClass('active')
+    description = $(e.target)
 
-    setTimeout(function() {elem.removeClass("active");}, time_taken)
+    text = description.attr("text")
+
+    description.text(text)
 }
 
+function init_idcard(idcard) {
+    description = idcard.find(".discription")
+    description.attr("text", description.text())
 
-let elem = get_random_elem()
-send_name(elem);
+    text = description.attr("text")
+    
+    description.text(truncate(text))
+    
+    img = $("<img>", { src: "files/3-white-dots.png", class: "dots" });
 
-function better_interval(callback, interval){
-    var end = Date.now() + interval;
-
-    setInterval(function() {
-        if (document.visibilityState != "hidden"){
-            $(".volunteer").css("animation-play-state", "running");
-
-            let time_left = end - Date.now()
-
-            if (time_left < 0){
-                callback()
-
-                end = Date.now() + interval;
-            }
-        }
-        else{
-            $(".volunteer").css("animation-play-state", "paused");
-        }
-
-    }, 100)
+    description.append(img)
 
 }
 
-better_interval(function() {
-    let elem = get_random_elem()
-    send_name(elem);
-}, interval);
 
+
+$(document).ready(function() {
+    $(".idcard").each(function(i, elem) {
+        init_idcard($(elem))
+    });
+
+    $(".idcard .discription").hover(expand, collapse)
+
+});
