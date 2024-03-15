@@ -19,7 +19,7 @@ function collapse(e) {
     // description.text(truncate(text))
     description.text("")
     
-    img = $("<img>", { src: "files/3-white-dots.png", class: "dots" });
+    img = $("<img>", { src: "files/3-white-dots.png", class: "dots", alt: "O O O" });
 
     description.append(img)
 }
