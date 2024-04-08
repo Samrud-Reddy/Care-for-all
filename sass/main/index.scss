@@ -2,6 +2,15 @@
 @import '_carasel';
 
 
+.text{
+    font-size: 1.3rem;
+    line-height: 2rem;
+    font-weight: 500;
+
+    color: #ccc;
+}
+
+
 .website-section{
     position: relative;
     padding: 1rem;
@@ -38,18 +47,11 @@
             margin-inline: 2rem;
             aspect-ratio: auto;
             width: 40rem;
-
         }
-        p{
-            font-size: 1.3rem;
-            line-height: 2rem;
-            font-weight: 500;
-            
-            color: #ccc;
-            
+
+        .text {
             margin-inline: 2rem;
         }
-
     }
 }
 //timeline
@@ -88,12 +90,7 @@
 
 
     .text{
-        font-size: 1.3rem;
-        line-height: 2rem;
         margin-inline: 10rem;
-        font-weight: 500;
-        color: #ccc;
-
         margin-bottom: 2rem;
     }
 }
