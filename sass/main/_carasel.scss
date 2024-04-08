@@ -1,7 +1,7 @@
 @import '../_colors';
 
 
-$width-carasel: calc(90vw - 5rem);
+$width-carasel: calc(85vw);
 
 
 
@@ -55,9 +55,11 @@ $width-carasel: calc(90vw - 5rem);
 .arrow{
     box-sizing: content-box !important;
     position: absolute;
-    height: 5rem;
+    height: min(10vw, 5rem);
+
     transform: translateY(-50%);
     top: 50%;
+
     padding-block: 10vh;
 
     &:hover{
@@ -67,12 +69,12 @@ $width-carasel: calc(90vw - 5rem);
 
 .left{
     left: 0px;
-    margin-left: 2vw;
+    margin-left: min(20px, 1vw);
 }
 
 .right{
     right: 0px;
-    margin-right: 2vw;
+    margin-right: min(20px, 1vw);
 }
 
 .selector{
