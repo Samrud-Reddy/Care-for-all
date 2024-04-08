@@ -121,42 +121,26 @@
     }
 
     .collab-idcard{
-        display: flex;
-        flex-direction: column; 
-        
-        justify-self: center;
-
-        justify-content: start;
-        align-items: center;
-
-        width: 25rem;
 
         height: 100%;
-
-
-        h2{
-            font-size: 2.4rem;
-            height: 7rem;
-            line-height: 3rem;
-
-            text-transform: capitalize;
-        }
-
         
         img{
-            height: 10rem;
+            height: 10vw;
             aspect-ratio: auto;
         }
-
-
-        p{
-            margin-top: 1.5rem;
-            width: 70%;
-        }
-        
     }
 
 }
+
+// @media screen and (width < 100px) {
+//     .content {
+//         grid-template-columns: 1fr !important;
+//     }
+
+//     .collab-idcard img {
+//         height: 15vw !important;
+//     }
+// }
 
 //Our Team
 #team{
