@@ -77,13 +77,14 @@
         grid-template-rows: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
 
-        margin-inline: 12rem;
+        width: min(100ch, 80vw);
+        margin-inline: auto;
 
     }
 
     .counter{
         align-self: start;
-        font-size: 4rem;
+        font-size: clamp(1.3rem, 6vw, 4rem);
 
         font-weight: 600;
 
@@ -94,13 +95,14 @@
     }
 
     .label{
-        font-size: 2.5rem;
+        font-size: clamp(1rem, 3vw, 2.5rem);
         align-self: baseline;
     }
 
 
     .text{
-        margin-inline: 10rem;
+        width: min(75ch, 80vw);
+        margin-inline: auto;
         margin-bottom: 2rem;
     }
 }

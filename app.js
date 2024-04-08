@@ -88,7 +88,7 @@ app.use((req, res) => {
   res.render("pagenotfound.ejs")
 })
 
-app.listen(port, () => {
+app.listen(port, '192.168.0.209', () => {
   console.log(`Example app listening on port ${port}`)
   console.log(`http://localhost:${port}`)
 })
