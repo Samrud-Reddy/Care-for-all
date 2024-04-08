@@ -1,13 +1,13 @@
 @import '../_colors';
 
 
-$width-carasel: calc(90vw - 7rem);
+$width-carasel: calc(90vw - 5rem);
 
 
 
 .carasoul-section{
     position: relative;
-    height: calc(85vh - 5rem);
+    aspect-ratio: 11 / 4;
     margin-top: 2rem;
 
 
@@ -67,12 +67,12 @@ $width-carasel: calc(90vw - 7rem);
 
 .left{
     left: 0px;
-    margin-left: 2rem;
+    margin-left: 2vw;
 }
 
 .right{
     right: 0px;
-    margin-right: 2rem;
+    margin-right: 2vw;
 }
 
 .selector{
