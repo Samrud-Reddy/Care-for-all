@@ -48,3 +48,25 @@ $(".has_content").click((e) => {
         open_submenu = e.target
     }
 })
+
+navbar_is_vertical = null
+
+if (window.innerWidth >= 1050) {
+    navbar_is_vertical = false
+} else {
+    navbar_is_vertical = true
+}
+
+$(window).resize(function() {
+    var windowWidth = window.innerWidth;
+    if (windowWidth >= 1050) {
+        $(".nav_buttons").show();
+        navbar_is_vertical = false
+    } else if (windowWidth < 1050 && !navbar_is_vertical) {
+        close_menu()
+    }
+
+
+    console.log("Window width: ", windowWidth)
+
+});

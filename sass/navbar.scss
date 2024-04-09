@@ -75,7 +75,7 @@
 }
 
 // Nav bar on top
-@media screen and (width > 1050px) {
+@media screen and (width >= 1050px) {
     .cover {
         display: none;
     }
