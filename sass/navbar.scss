@@ -58,6 +58,22 @@
     }
 }
 
+.navbutton {
+    background-color: inherit;
+    color: #ccc;
+
+    border: none;
+    opacity: 100%;
+    font-size: 1rem;
+    
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover{
+        color: darken($color: white, $amount: 40%);
+    }
+}
+
 // Nav bar on top
 @media screen and (width > 1050px) {
     .cover {
@@ -129,22 +145,9 @@
     }
 
     .navbutton{
-        background-color: inherit;
-        color: #ccc;
-
-        border: none;
-        opacity: 100%;
-        font-size: 1rem;
         padding: 0.1rem;
 
-        cursor: pointer;
-        text-decoration: none;
-
         margin-block: 0.2rem;
-
-        &:hover{
-            color: darken($color: white, $amount: 40%);
-        }
     }
 }
 
@@ -158,7 +161,6 @@
         background-color: #222;
         
         gap: 1rem;
-        justify-content: flex-start;
 
         position: fixed;
         top: 5rem;
@@ -170,8 +172,24 @@
         box-shadow: $background 0px 0px 10px 5px;
     }
 
+    .dropdown {position: relative;}
+
     .dropdown-content {
         display: none;
+        position: absolute;
+        
+        transform: translateX(100%);
+
+        right: 0px;
+        top: 0px;
+
+        flex-direction: column;
+        background-color: #222;
+        gap: 0.8rem;
+
+        padding: 1rem;
+        border-radius: 1rem;
+        box-shadow: $background 0px 0px 10px 5px;
     }
 
     .navbar {

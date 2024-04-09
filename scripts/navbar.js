@@ -44,7 +44,7 @@ $(".has_content").click((e) => {
         close_all_sub_menu()
     } else {
         close_all_sub_menu()
-        $(e.target).next(".dropdown-content").show()
+        $(e.target).next(".dropdown-content").css("display", "flex")
         open_submenu = e.target
     }
 })
