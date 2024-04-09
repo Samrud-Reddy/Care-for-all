@@ -1,21 +1,26 @@
-is_open = true
+main_menu_is_open = false
+open_submenu = null
 
 function open_menu() {
     $(".cover").show()
     $(".nav_buttons").css("display", "flex")
-    is_open = true
+    main_menu_is_open = true
+}
+
+function close_all_sub_menu() {
+    $(".dropdown-content").hide()
+    open_submenu = null
 }
 
 function close_menu() {
+    close_all_sub_menu()
     $(".cover").hide()
     $(".nav_buttons").hide()
-    is_open = false
+    main_menu_is_open = false
 }
 
-open_menu()
-
 $(".menu").click(() => {
-    if (is_open) {
+    if (main_menu_is_open) {
         close_menu()
     } else {
         open_menu()
@@ -31,4 +36,15 @@ $('.navbar').click(function(event) {
 
 $(".cover").click(() => {
     close_menu()
+})
+
+
+$(".has_content").click((e) => {
+    if (e.target == open_submenu) {
+        close_all_sub_menu()
+    } else {
+        close_all_sub_menu()
+        $(e.target).next(".dropdown-content").show()
+        open_submenu = e.target
+    }
 })
