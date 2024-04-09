@@ -49,4 +49,4 @@ $(document).ready(function() {
 
     $(".idcard .discription").hover(expand, collapse)
 
-});
+ });

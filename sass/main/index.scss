@@ -132,16 +132,6 @@
 
 }
 
-// @media screen and (width < 100px) {
-//     .content {
-//         grid-template-columns: 1fr !important;
-//     }
-
-//     .collab-idcard img {
-//         height: 15vw !important;
-//     }
-// }
-
 //Our Team
 #team{
     position: relative;
@@ -177,7 +167,7 @@
         justify-content: start;
         align-items: center;
 
-        width: 25rem;
+        width: clamp(15rem, 30vw, 25rem);
 
         height: 100%;
 
@@ -205,8 +195,8 @@
             margin-top: 1rem;
             width: 80%;
             font-weight: 300;
-            font-size: 1rem;
-            line-height: 1.4rem;
+            font-size: clamp(1rem, 1.3vw, 1rem);
+            line-height: clamp(1.2rem, 1.6vw, 1.4rem);
             color: #fff;
             position: relative;
 
@@ -217,8 +207,36 @@
                 margin-left: 1ch;
             }
         }
+    }
 
+    @media screen and (600px <= width < 1000px) {
+        .content {
+            grid-template-columns: 2;
+            grid-template-rows: 7;
+        }
 
+        .founder{
+            grid-column-start: span 2;
+        }
+
+        .idcard{
+            width: clamp(10rem, 45vw, 25rem);
+        }
+    }
+
+    @media screen and (width < 600px) {
+        .content {
+            grid-template-columns: 1;
+            grid-template-rows: 13;
+        }
+
+        .founder{
+            grid-column-start: span 1;
+        }
+
+        .idcard{
+            width: clamp(10rem, 90vw, 25rem);
+        }
     }
 
     .volunteers{
