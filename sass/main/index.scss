@@ -239,11 +239,15 @@
     }
 }
 
+$height_of_track: 5rem;
+
 .volunteers{
-    margin-bottom: 10rem;
     position: relative;
 
-    margin-inline: 5rem;
+    border: white solid 2px;
+    margin-inline: 10%;
+    width: 80%;
+    height: calc($height_of_track * 3);
 }
 
 
@@ -254,26 +258,19 @@
 
 .volunteer{
     display: none;
-
+    position: absolute;
 
     white-space: nowrap;
     font-size: 2rem;
     
-    height: 5rem;
-
-    margin-inline: 5rem;
-
-    transform: translateX(-50%);
-
+    height: $height_of_track;
     color: #aaa;
 
     overflow-x: hidden;
+    transform: translateX(-50%);
 }
 
-.active{
-    position: absolute;
-    display: block;        
-
+.move {
     animation: left-right 10s linear forwards;
 }
 
