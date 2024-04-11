@@ -65,8 +65,4 @@ $(window).resize(function() {
     } else if (windowWidth < 1050 && !navbar_is_vertical) {
         close_menu()
     }
-
-
-    console.log("Window width: ", windowWidth)
-
 });
