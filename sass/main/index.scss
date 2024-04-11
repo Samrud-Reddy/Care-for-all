@@ -244,8 +244,7 @@ $height_of_track: 5rem;
 .volunteers{
     position: relative;
 
-    margin-inline: 10%;
-    width: 80%;
+    margin-inline: max(10ch, 10%);
     height: calc($height_of_track * 3);
 }
 
@@ -260,7 +259,7 @@ $height_of_track: 5rem;
     position: absolute;
 
     white-space: nowrap;
-    font-size: 2rem;
+    font-size: clamp(1.4rem, 4vw, 2rem);
     
     height: $height_of_track;
     color: #aaa;
