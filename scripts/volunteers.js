@@ -7,17 +7,6 @@ function shuffleArray(array) {
     return array
 }
 
-order = []
-
-$('.volunteer').each(function() {
-    $(this).attr("length", $(this).text().length)
-
-    order.push($(this))
-});
-
-order = shuffleArray(order)
-new_order = []
-
 function reset(elem) {
     elem.removeClass("move")
     elem.css("display", "none")
@@ -33,10 +22,6 @@ function pop() {
     return new_order[new_order.length - 1]
 }
 
-height_of_track = $(".volunteer").height()
-
-prev_track = -1
-
 function random(start, end) {
     return Math.floor((Math.random() * end) + start)
 }
@@ -51,6 +36,7 @@ function generate_track() {
     return prev_track
 }
 
+
 function spawn() {
     elem = pop()
     track = generate_track()
@@ -60,10 +46,42 @@ function spawn() {
     elem.show()
 
     time = elem.attr("length")
-    console.log(order)
     setTimeout(() => {
-        spawn()
-    }, time*150)
+        if (run) {
+            spawn()
+        }
+    }, time*150*(1500/window.innerWidth))
 }
 
-spawn()
+order = []
+
+new_order = []
+
+height_of_track = $(".volunteer").height()
+
+prev_track = -1
+
+run = true
+
+function start() {
+    $('.volunteer').each(function() {
+        $(this).attr("length", $(this).text().length)
+
+        order.push($(this))
+    });
+
+    order = shuffleArray(order)
+
+    run = true
+
+    spawn()
+}
+
+function stop() {
+    run = false
+    $(".volunteer").removeClass("move")
+    $(".volunteer").css("display", "none")
+}
+
+
+start()
