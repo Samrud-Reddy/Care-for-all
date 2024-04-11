@@ -69,7 +69,6 @@
 @import '_timeline';
 
 
-
 //done_so_far
 #done_so_far{
     .content{
@@ -238,65 +237,64 @@
             width: clamp(10rem, 90vw, 25rem);
         }
     }
-
-    .volunteers{
-        margin-bottom: 10rem;
-        position: relative;
-
-        margin-inline: 5rem;
-    }
-
-    h2{
-        font-size: 2rem;
-        margin-bottom: 3rem;
-    }
-    
-    .volunteer{
-        display: none;
-
-
-        white-space: nowrap;
-        font-size: 2rem;
-        
-        height: 5rem;
-
-        margin-inline: 5rem;
-
-        transform: translateX(-50%);
-
-        color: #aaa;
-
-        overflow-x: hidden;
-    }
-
-    .active{
-        position: absolute;
-        display: block;        
-
-        animation: left-right 10s linear forwards;
-    }
-
-
-    @keyframes left-right {
-        0%{
-            left: 0%;
-            opacity: 0%;
-        }
-
-        5%{
-            opacity: 100%;
-        }
-
-        95%{
-            opacity: 100%;
-        }
-
-        100%{
-            left: 100%;
-            opacity: 0%;
-            display: none;
-        }
-    }
-
 }
 
+.volunteers{
+    margin-bottom: 10rem;
+    position: relative;
+
+    margin-inline: 5rem;
+}
+
+
+#team h2{
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.volunteer{
+    display: none;
+
+
+    white-space: nowrap;
+    font-size: 2rem;
+    
+    height: 5rem;
+
+    margin-inline: 5rem;
+
+    transform: translateX(-50%);
+
+    color: #aaa;
+
+    overflow-x: hidden;
+}
+
+.active{
+    position: absolute;
+    display: block;        
+
+    animation: left-right 10s linear forwards;
+}
+
+
+@keyframes left-right {
+    0%{
+        left: 0%;
+        opacity: 0%;
+    }
+
+    5%{
+        opacity: 100%;
+    }
+
+    95%{
+        opacity: 100%;
+    }
+
+    100%{
+        left: 100%;
+        opacity: 0%;
+        display: none;
+    }
+}
