@@ -36,34 +36,45 @@ function generate_track() {
     return prev_track
 }
 
+$(".volunteer").on("animationend", function() {
+    spawn()
+    number -= 1
+})
+
 
 function spawn() {
+    if (number > limit) {
+        return
+    }
+    number += 1
     elem = pop()
     track = generate_track()
 
     elem.css("top", (height_of_track*track).toString() + "px")
     elem.addClass("move")
     elem.show()
-
-    time = elem.attr("length")
-    setTimeout(() => {
-        if (run) {
-            spawn()
-        }
-    }, time*150*(1500/window.innerWidth))
 }
+limit = 5
+total_time = 10
 
 order = []
-
 new_order = []
+
+number = 0
 
 height_of_track = $(".volunteer").height()
 
 prev_track = -1
 
-run = true
-
 function start() {
+    order = []
+    new_order = []
+
+    height_of_track = $(".volunteer").height()
+
+    prev_track = -1
+    number = 0
+
     $('.volunteer').each(function() {
         $(this).attr("length", $(this).text().length)
 
@@ -72,16 +83,21 @@ function start() {
 
     order = shuffleArray(order)
 
-    run = true
-
-    spawn()
+    for (i=0; i < limit; i++) {
+        setTimeout(spawn, i*1000*(total_time/limit))
+    }
 }
 
 function stop() {
-    run = false
     $(".volunteer").removeClass("move")
     $(".volunteer").css("display", "none")
 }
 
 
 start()
+
+$(window).resize(function(){
+    stop()
+    height_of_track = $(".volunteer").height()
+    start()
+});
