@@ -14,26 +14,23 @@ footer{
     }
 
     .content{
-        display: grid;
-
-        grid-template-columns: 1fr 1fr;
+        display: flex;
 
         align-items: center;
+        justify-content: space-between;
 
-        column-gap: 8rem;
-
-        margin-inline: 13rem;
+        width: min(60rem, 90vw);
+        margin-inline: auto;
 
     }
-
-
 
     .left{
         display: grid;
 
+        transform: translateX(20%);
 
         grid-template-rows: 3rem 3rem 5rem;
-        grid-template-columns: 2rem repeat(3, 0.3fr);
+        grid-template-columns: 3rem 1fr;
         
         align-content: center;
 
@@ -46,33 +43,53 @@ footer{
         align-items: center;
         
         .big{
-            grid-column: span 4;
-            display: flex;
+            grid-column: span 2;
+            display: grid;
+            grid-template-columns: 3rem 1fr;
             align-items: center;
 
+            column-gap: 0.5ch;
         }
 
-        &>div:not(.big){
+        .small {
+            display: flex;
+            flex-direction: row;
+
+            justify-content: space-around;
+        }
+
+        img{
+            height: 2.4rem;
+
             justify-self: center;
-        }
-
-        span{
-            font-weight: 700;
-            height: 2rem;
-            img{
-                height: 2.4rem;
-                margin-inline: 0.5ch;
-                            
-                &:hover{
-                    opacity: 60%;
-                    cursor: pointer;
-                }
+                        
+            &:hover{
+                opacity: 60%;
+                cursor: pointer;
             }
         }
 
         margin-bottom: 3rem;
-        padding-left: 5rem;
     }
+
+
+    @media screen and (width < 850px) {
+        .content {
+            flex-direction: column;
+            margin-bottom: 2rem;
+        }
+
+        .left {
+            margin-bottom: 0rem;
+        }
+    }
+
+    @media screen and (width < 950px) {
+        .left {
+            transform: translateX(0%);
+        }
+    }
+
 
     .right{
         display: grid;
@@ -89,7 +106,7 @@ footer{
     }
 
 
-    label[for=name], label[for=email], label[for=msg]{
+    label[for=name], label[for=email]{
         font-size: 1.2rem;
 
         height: 100%;
