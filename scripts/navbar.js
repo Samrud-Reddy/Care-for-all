@@ -60,7 +60,7 @@ if (window.innerWidth >= 1050) {
 $(window).resize(function() {
     var windowWidth = window.innerWidth;
     if (windowWidth >= 1050) {
-        $(".nav_buttons").show();
+        $(".nav_buttons").css("display", "flex");
         navbar_is_vertical = false
     } else if (windowWidth < 1050 && !navbar_is_vertical) {
         close_menu()
