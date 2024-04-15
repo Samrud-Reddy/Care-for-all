@@ -1,11 +1,24 @@
+@media screen and (width > 800px){
+    :root {
+        --width: 80vw;
+    }
+}
+
+@media screen and (width <= 800px){
+    :root {
+        --width: 70vw;
+    }
+}
+
+
 $active: #2C3E50;
 $inactive: #AEB6BF;
 
 $events: 6;
-$timeline_width: calc(80vw - 3rem);
+$timeline_width: var(--width);
 $half_timeline_width: calc($timeline_width / calc(2 * $events));
 
-$event_width: 2rem;
+$event_width: clamp(1.5rem, 4vw, 2.5rem);
 $trans_time: 0.25s;
 
 .entire_timeline{
@@ -16,7 +29,7 @@ $trans_time: 0.25s;
 .timeline{
     display: flex;
     flex-direction: row;
-    width: 80%;
+    width: $timeline_width;
 
     margin-inline: auto;
 
@@ -90,10 +103,10 @@ $trans_time: 0.25s;
     content: attr(data-year);
 }
 
-
+$font_size: clamp(0.3rem, 2.5vw, 1rem);
 
 .event span::before, span::after {
-    font-size: 1rem;
+    font-size: $font_size;
 
     transform: translate(-50%, -50%);
     left: 50%;
@@ -104,36 +117,38 @@ $trans_time: 0.25s;
     visibility: visible;
     position: absolute;
 
-    width: 15ch;
+    width: min(calc(calc($half_timeline_width * 4) - 1rem), 15ch);
     transition: all $trans_time ease-out;
 }
 
 .not_end span::after{
-    font-size: 1.2rem;
+    font-size: calc($font_size * 1.2);
     font-weight: 100;
     color: #fff;
 
 }
 
 .not_end:hover > span::before{
-    font-size: 1.2rem;   
+    font-size: calc($font_size * 1.2);
 }
 .not_end:hover > span::after {
-    font-size: 1.4rem;
+    font-size: calc($font_size * 1.4);
+}
+
+
+.event:first-child span::before, .event:last-child span::before {
+    top: 50%;
+    font-size: clamp(1.2rem, 4vw, 1.5rem);
 }
 
 .event:first-child span::before {
-    transform: translate(0%, -50%) !important;
-    top: 50%;
-    font-size: 1.5rem;
-    left: calc(calc($event_width * -1) - 3rem);
+    transform: translate(-100%, -50%) !important;
+    left: calc(clamp(0.1rem, 1vw, 1rem) * -1);
 }
 
 .event:last-child span::before {
     transform: translate(0%, -50%) !important;
-    top: 50%;
-    font-size: 1.5rem;
-    left: calc(calc($event_width * 1) + 1rem);
+    left: calc($event_width + clamp(0.1rem, 1vw, 1rem));
 }
 
 
@@ -155,6 +170,13 @@ $trans_time: 0.25s;
 .not_end:nth-child(odd) span::after {
     top: calc(0% - 1.4rem);
 }
+
+@media screen and (width < 1100px){
+    .not_end span::after {
+        display: none;
+    }
+}
+
 
 .not_end>span{
     width: $event_width;
@@ -178,54 +200,3 @@ $trans_time: 0.25s;
 
 }
 
-
-.journey_content{
-    margin-block: 2rem;
-    margin-inline: 5rem;
-    display: none;
-    &.active{
-        display: grid;
-    }
-
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 5rem 1fr;
-
-    column-gap: 2rem;
-
-    align-items: start;
-    justify-items: center;
-
-    h2{
-        font-size: 2rem;
-        text-transform: capitalize;
-    }
-
-    .date{
-        font-size: 1.6rem;
-
-        justify-self: center;
-        align-self: center;
-
-        color: #aaa;
-
-        // width: 100%;
-        // position: relative;
-        // transform: translateX(-50%);
-        // left: calc(25rem);
-    }
-
-    img{
-        height: 20rem;
-        width: 35rem;
-    }
-
-    p{
-        align-self: center;
-
-        font-size: 1.3rem;
-        line-height: 1.8rem;
-
-        padding: 1rem;
-    }
-
-}

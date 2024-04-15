@@ -1,44 +1,46 @@
+<script>
+    function clear() {
+        document.getElementById("name").value = ""
+        document.getElementById("email").value = ""
+        document.getElementById("msg").value = ""
+    }
+    function submitForm() {
+        let name = document.getElementById("name")
+        let email = document.getElementById("email")
+        let msg = document.getElementById("msg")
+
+        let endpoint = "/contact"
+        fetch(endpoint, {
+            method: "POST",
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                name: name.value,
+                email: email.value,
+                msg: msg.value,
+            }),
+            followRedirects: false
+        }).then((res) => {
+            if (res.ok) {
+                clear()
+                alert("Feedback sent")
+            }
+        }) 
+    }
+</script>
 <link rel="stylesheet" href="styles/footer.css">
 <footer>
     <h1>Contact Us</h1>
     <div class="content">
         <div class="left">
-            <div class="big"><span><img src="files/icons/mail.png" alt="icon"></span> careforall1000plus@gmail.com</div>
-            <div class="big"><span><img src="files/icons/phone-r.png" alt="icon"></span>+91 8197782013</div>
+            <div class="big"><img src="files/icons/mail.png" alt="icon">careforall1000plus@gmail.com</div>
+            <div class="big"><img src="files/icons/phone-r.png" alt="icon">+91 8197782013</div>
             <div></div>
-            <div><span><a target="_blank" href="https://instagram.com/careforall1000?igshid=OGQ5ZDc2ODk2ZA=="><img src="files/icons/instagram.png" alt="icon"></a></span></div>
-            <div><span><a target="_blank" href="https://www.youtube.com/@CareForAll_1000"><img src="files/icons/youtube.png" alt="icon"></a></span></div>
-            <div><span><a target="_blank" href="https://twitter.com/Careforall1000"><img src="files/icons/twitter.png" alt="icon"></a></span></div>
+            <div class="small">
+                <div><span><a target="_blank" href="https://instagram.com/careforall1000?igshid=OGQ5ZDc2ODk2ZA=="><img src="files/icons/instagram.png" alt="icon"></a></span></div>
+                <div><span><a target="_blank" href="https://www.youtube.com/@CareForAll_1000"><img src="files/icons/youtube.png" alt="icon"></a></span></div>
+                <div><span><a target="_blank" href="https://twitter.com/Careforall1000"><img src="files/icons/twitter.png" alt="icon"></a></span></div>
+            </div>
         </div>
-        <script>
-            function clear() {
-                document.getElementById("name").value = ""
-                document.getElementById("email").value = ""
-                document.getElementById("msg").value = ""
-            }
-            function submitForm() {
-                let name = document.getElementById("name")
-                let email = document.getElementById("email")
-                let msg = document.getElementById("msg")
-
-                let endpoint = "/contact"
-                fetch(endpoint, {
-                    method: "POST",
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        name: name.value,
-                        email: email.value,
-                        msg: msg.value,
-                    }),
-                    followRedirects: false
-                }).then((res) => {
-                    if (res.ok) {
-                        clear()
-                        alert("Feedback sent")
-                    }
-                }) 
-            }
-        </script>
         <form class="right" action="/contact" method="post" onsubmit="submitForm();return false">
             <label for="name">Name:</label>
             <label for="email">Email:</label>

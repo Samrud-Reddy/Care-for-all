@@ -1,76 +1,103 @@
-const height = $(".volunteer").height()
-
-//change in css
-const time_taken = 8 * 1000
-const interval = 1 * 1000;
-
-var last_track = -1;
-function gen_track(elem){
-    let track = Math.floor(Math.random() * 3)
-
-    if (track == last_track){
-        track = gen_track(elem);
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
     }
 
-    last_track = track
-    return track;
+    return array
 }
 
-function get_random_elem(){
-    var inactiveDivs =  $(".volunteer:not(.active)");
+function reset(elem) {
+    elem.removeClass("move")
+    elem.css("display", "none")
+}
 
-    if (inactiveDivs.length == 0){
-        return -1;
+function pop() {
+    if (order.length == 0) {
+        order = new_order.reverse()
+        new_order = []
+    }
+    reset(order[order.length - 1])
+    new_order.push(order.pop())
+    return new_order[new_order.length - 1]
+}
+
+function random(start, end) {
+    return Math.floor((Math.random() * end) + start)
+}
+
+function generate_track() {
+    if (prev_track == -1) {
+        prev_track = (prev_track + random(1, 3)) % 3
+    } else {
+        prev_track = (prev_track + random(1,2)) % 3
     }
 
-
-
-    var randomIndex = Math.floor(Math.random() * inactiveDivs.length);
-
-    var randomInactiveDiv = inactiveDivs.eq(randomIndex);
-    return randomInactiveDiv;
+    return prev_track
 }
 
-// function remove_active(){
-//     $(".volunteer").removeClass("active");
-// }
+$(".volunteer").on("animationend", function() {
+    spawn()
+    number -= 1
+})
 
-function send_name(elem){
-    elem.css({ top: gen_track(elem)*height+"px" });
-    elem.addClass('active')
 
-    setTimeout(function() {elem.removeClass("active");}, time_taken)
+function spawn() {
+    if (number > limit) {
+        return
+    }
+    number += 1
+    elem = pop()
+    track = generate_track()
+
+    elem.css("top", (height_of_track*track).toString() + "px")
+    elem.addClass("move")
+    elem.show()
+}
+limit = 5
+total_time = 10
+
+order = []
+new_order = []
+
+number = 0
+
+height_of_track = $(".volunteer").height()
+
+prev_track = -1
+
+function start() {
+    order = []
+    new_order = []
+
+    height_of_track = $(".volunteer").height()
+
+    prev_track = -1
+    number = 0
+
+    $('.volunteer').each(function() {
+        $(this).attr("length", $(this).text().length)
+
+        order.push($(this))
+    });
+
+    order = shuffleArray(order)
+
+    for (i=0; i < limit; i++) {
+        setTimeout(spawn, i*1000*(total_time/limit))
+    }
+}
+
+function stop() {
+    $(".volunteer").removeClass("move")
+    $(".volunteer").css("display", "none")
 }
 
 
-let elem = get_random_elem()
-send_name(elem);
+start()
 
-function better_interval(callback, interval){
-    var end = Date.now() + interval;
-
-    setInterval(function() {
-        if (document.visibilityState != "hidden"){
-            $(".volunteer").css("animation-play-state", "running");
-
-            let time_left = end - Date.now()
-
-            if (time_left < 0){
-                callback()
-
-                end = Date.now() + interval;
-            }
-        }
-        else{
-            $(".volunteer").css("animation-play-state", "paused");
-        }
-
-    }, 100)
-
-}
-
-better_interval(function() {
-    let elem = get_random_elem()
-    send_name(elem);
-}, interval);
-
+$(window).resize(function(){
+    stop()
+    height_of_track = $(".volunteer").height()
+    start()
+});

@@ -10,19 +10,16 @@
     <link rel="stylesheet" href="styles/main/index.css">
     <link rel="stylesheet" href="styles/default.css">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="scripts/volunteers.js" defer></script>
     <script src="scripts/carasel.js" defer></script>
     <script src="scripts/scroll-reveal.js" defer></script>
-    <script src="scripts/our-team.js"></script>
+    <script src="scripts/timeline.js" defer></script>
+    <script src="scripts/our-team.js" defer></script>
 
     <%- include('partials/navbar') %>
 
 </head>
 <body>
-
-    <div style="height: 5rem;"></div>
-
     <section class="carasoul-section">
         <img src="files/left.png" alt="<-" class="arrow left" onclick="go_left()">
         <div class="carasel">
@@ -44,7 +41,7 @@
         <h1>Our Mission</h1>
         <div class="simple_content">
             <img src="files/pics/mission.png" alt="our_mission">
-            <p>
+            <p class="text">
                 CareForAll (CFA) is a non-profit organisation that was birthed with the mission of providing 1000+ of the underprivileged with healthcare and awareness.
                 <br><br>
                 Along our journey, we have realised that we have the potential to help several more; Thus now instead of aiming for a specific number of lives to impact, our mission is to facilitate  as many of the underprivileged we can provide medical aid and beneficial awareness to.</p>
@@ -82,7 +79,7 @@
             <div class="journey_content active">
                 <h2>First medical camp</h2>
                 <div class="date">14/05/2023</div>
-                <p>
+                <p class="text">
                     We ran our first medical camp on 14th of May 2023 with the Building Blocks India foundation for 100 children. This camp was intended for the general check-ups and deworming for all of the children, and was a major ‘first’ for CareForAll. Thanks to the cooperation from the Building Blocks team, along with the hard work put in by each of our very first set of volunteers at site, this camp was a huge success! 
                     <br>
                     <br>
@@ -93,13 +90,13 @@
             <div class="journey_content">
                 <h2>Collaboration with lending library</h2>
                 <div class="date">08/06/2023</div>
-                <p>We expanded our horizons by collaborating with the Lending Library, an organisation which serves as a platform for book and literature exchanges within gated communities in India. Lending Library is majorly deployed in higher income communities, where residents are willing to donate some of their books. By working together, we were able to contribute these charitable donations towards facilitating rural libraries for the underprivileged families.</p>
+                <p class="text">We expanded our horizons by collaborating with the Lending Library, an organisation which serves as a platform for book and literature exchanges within gated communities in India. Lending Library is majorly deployed in higher income communities, where residents are willing to donate some of their books. By working together, we were able to contribute these charitable donations towards facilitating rural libraries for the underprivileged families.</p>
                 <img src="files/pics/lending library.png" alt="placeholder">
             </div>
             <div class="journey_content">
                 <h2>First awarness camp</h2>
                 <div class="date">24/06/2023</div>
-                <p>
+                <p class="text">
                     We ran our first awareness camp on 24th of June 2023 with the Diya Ghar foundation, where we educated their young children on the importance of hand washing and the correct technique with which to hand wash. This camp was also a learning experience for us, as we explored new ways we could help the underprivileged outside the realm of medical camps.
                 </p>
                 <img src="files/pics/awarness.jpeg" alt="placeholder">
@@ -107,13 +104,13 @@
             <div class="journey_content">
                 <h2>Biggest Medical Camp</h2>
                 <div class="date">05/08/2023</div>
-                <p>We ran our biggest medical camp yet on 5th of August 2023 with Ramagondanahalli Government school for over 300 children. This camp was intended for the general check-ups and diagnosis for all of the children, and showcased how far CareForAll has come as a team and organisation. By mobilising doctors from collaborations with several hospitals and rallying numerous hard-working and dedicated volunteers, we were able to make this large-scale camp run smoothly and push it towards a great success!</p>
+                <p class="text">We ran our biggest medical camp yet on 5th of August 2023 with Ramagondanahalli Government school for over 300 children. This camp was intended for the general check-ups and diagnosis for all of the children, and showcased how far CareForAll has come as a team and organisation. By mobilising doctors from collaborations with several hospitals and rallying numerous hard-working and dedicated volunteers, we were able to make this large-scale camp run smoothly and push it towards a great success!</p>
                 <img src="files/pics/biggest.png" alt="placeholder">
             </div>
             <div class="journey_content">
                 <h2>Published in Times of India</h2>
                 <div class="date">23/08/2023</div>
-                <p>The CareForAll name had been spreading quite a bit over the past few months, which enabled us to collaborate with more hospitals and doctors, rally a greater number of volunteers, and complete more camps for an increased population. However, CareForAll was first officially publicised on 23rd of August 2023  in the Bangalore Mirror - Times of India newspaper. This publicity allowed us to network with more NGOs and hospitals, and opened new doors of opportunity and chances to collaborate with other great organisations.</p>
+                <p class="text">The CareForAll name had been spreading quite a bit over the past few months, which enabled us to collaborate with more hospitals and doctors, rally a greater number of volunteers, and complete more camps for an increased population. However, CareForAll was first officially publicised on 23rd of August 2023  in the Bangalore Mirror - Times of India newspaper. This publicity allowed us to network with more NGOs and hospitals, and opened new doors of opportunity and chances to collaborate with other great organisations.</p>
                 <img src="files/pics/times.jpeg" alt="placeholder">
             </div>
         </div>
@@ -124,7 +121,7 @@
         <h1>What Makes Us Unique</h1>
         <div class="simple_content">
             <img src="files/pics/unique.png" alt="our_mission">
-            <p>At CareForAll, we hold medical camps and awareness sessions (where we educate children on simple, effective hygiene techniques they can easily incorporate into their lives; we also inform and register adults for government schemes they can directly benefit from) simultaneously. We firmly believe that it is necessary to hold both medical and awareness sessions, as while the health camp restore the health conditions of individuals, our awareness sessions serve to maintain these stable conditions and prevents families from returning to the same deteriorating conditions that cause a self-perpetuating cycle of disease and illness.
+            <p class="text">At CareForAll, we hold medical camps and awareness sessions (where we educate children on simple, effective hygiene techniques they can easily incorporate into their lives; we also inform and register adults for government schemes they can directly benefit from) simultaneously. We firmly believe that it is necessary to hold both medical and awareness sessions, as while the health camp restore the health conditions of individuals, our awareness sessions serve to maintain these stable conditions and prevents families from returning to the same deteriorating conditions that cause a self-perpetuating cycle of disease and illness.
             <br>
             <br>
             Additionally, from the medicines and follow-ups for each individual to the food and drinks we provide at camps and sessions, we fund everything ourselves, leaving the NGOs and schools without any expense of their own.</p>
@@ -134,10 +131,10 @@
     <section class="website-section" id="done_so_far">
         <h1>What We've Done</h1>
 
-        <div class="text">By mobilising and collaborating with doctors from top-tier hospitals —including Sakra World Hospital and Ramaiah Medical College— engaging student volunteers, and collaborating with well-known  NGOs, CareForAll has been able to impact over a number of lives so far through medical camps and awareness sessions. 
+        <p class="text">By mobilising and collaborating with doctors from top-tier hospitals —including Sakra World Hospital and Ramaiah Medical College— engaging student volunteers, and collaborating with well-known  NGOs, CareForAll has been able to impact over a number of lives so far through medical camps and awareness sessions. 
         <br>
         <br>
-        Our definition of success when it comes to impacting lives isn’t just a one-time interaction, but involves a series of follow-ups to ensure that a positive difference is being made in someone’s life to provide them a better opportunity towards a longer and more hassle-free life.</div>
+        Our definition of success when it comes to impacting lives isn’t just a one-time interaction, but involves a series of follow-ups to ensure that a positive difference is being made in someone’s life to provide them a better opportunity towards a longer and more hassle-free life.<p/>
         <div class="content counters">
 
             <div class="counter" final="850" time="1">1</div>
@@ -152,37 +149,21 @@
         <div class="content">
             <div class="collab-idcard">
                 <img src="files/colabs/ramaiah.jpeg" alt="Ramaiah">
-                <!-- <p div class="discription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quae possimus error provident </p> -->
             </div>
             <div class="collab-idcard">
-                <!-- <h2>Building Blocks India</h2> -->
                 <img src="files/colabs/building blocks.jpeg" alt="Building Blocks">
-                <!-- <p class="discription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quae possimus error provident </p> -->
             </div>
-            <!-- <div class="collab-idcard">
-                <h2>Ramagondanahalli</h2>
-                <img src="files/colabs/ramagondanahalli.jpeg" alt="Ramagondanahalli">
-                <p class="discription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quae possimus error provident </p>
-            </div> -->
             <div class="collab-idcard">
-                <!-- <h2>Diya Ghar NGO</h2> -->
                 <img src="files/colabs/diya.jpeg" alt="diya ghar ngo">
-                <!-- <p class="discription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quae possimus error provident </p> -->
             </div>
             <div class="collab-idcard">
-                <!-- <h2>Lending Library</h2> -->
                 <img src="files/colabs/lending-library.jpeg" alt="lending library">
-                <!-- <p class="discription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quae possimus error provident </p> -->
             </div>
             <div class="collab-idcard">
-                <!-- <h2>Sparsh Foundation</h2> -->
                 <img src="files/colabs/sparsh.jpeg" alt="sparsh foundation">
-                <!-- <p class="discription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quae possimus error provident </p> -->
             </div>
             <div class="collab-idcard">
-                <!-- <h2>Sparsh Foundation</h2> -->
                 <img src="files/colabs/ramagundanahlli.png" alt="Ramagondanahalli">
-                <!-- <p class="discription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quae possimus error provident </p> -->
             </div>
         </div>
     </section>

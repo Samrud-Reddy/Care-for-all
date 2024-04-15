@@ -5,55 +5,83 @@ body{
     text-align: center;
 }
 
+.text{
+    font-size: clamp(0.9rem, 3vw, 1.4rem);
+    line-height: clamp(1.4rem, 4vw, 2rem);
+    font-weight: 500;
+
+    color: #ccc;
+}
+
 h1{
     margin-block: 3rem;
-    margin-inline: 12rem;
-    font-size: 1.9rem;
-    line-height: 3rem;
+    margin-inline: auto;
+    width: min(60ch, calc(100vw - 5rem));
+    font-size: clamp(1.4rem, 5vw, 1.9rem);
+    line-height: clamp(1.9rem, 6vw, 3rem);
+;
 
     font-weight: 400;
 }
 
 h2{
-    margin-block: 5rem;
-    margin-inline: 10rem;
-    font-size: 1.4rem;
-    line-height: 2rem;
+    margin-block: 3rem;
+    margin-inline: auto;
+    width: min(55ch, calc(100vw - 7rem));
+    font-size: clamp(1.1rem, 4.2vw, 1.4rem);
+    line-height: clamp(1.2rem, 5vw, 2rem);
 
     font-weight: 400;
 }
 
 ul{
     text-align: start;
+    width: min(100ch, calc(100vw - 5rem));
     margin-inline: auto;
-    width: 100ch;
-    transform: translateX(-2ch);
 
     li{
-        display: flex;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "a b";
+        grid-column-gap: 2rem;
+
         align-items: center;
         justify-content: space-between;
+        justify-items: center;
         margin-block: 8rem;
-        p {
-            font-size: 1.4rem;
-            line-height: 2rem;
-            padding-inline: 4rem;
+
+        p{
+            grid-area: a;
         }
+        
         img {
-            width: 50%;
+            grid-area: b;
+            max-height: 20rem;
+            max-width: 100%;
         }
 
         &:nth-child(even){
-            flex-direction: row-reverse;
+            grid-template-areas: "b a";
         }
     }
-
 }
 
+@media screen and (width < 900px) {
+    li {
+        text-align: center;
+        grid-template-areas: "b"
+                             "a" !important;
+        grid-template-rows: auto 1fr;
+        grid-row-gap: 2rem;
+        grid-template-columns: 1fr !important;
+    }
+}
 
 h3{
     margin-block-start: 2rem;
     margin-block-end: 4rem;
+    margin-inline: 1rem;
     font-size: 2rem;
     font-weight: 600;
 }
