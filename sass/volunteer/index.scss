@@ -1,6 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import '../_colors';
 
+
+.text{
+    font-size: clamp(0.8rem, 3vw, 1.3rem);
+    line-height: clamp(1.4rem, 4vw, 2rem);
+    font-weight: 400;
+
+    color: #ccc;
+}
+
 .first{
     color: white;
 
@@ -15,7 +24,7 @@ h1{
     font-size: 2.4rem;
     color: #aaa;
 
-    margin-bottom: 7rem;
+    margin-bottom: min(7rem, 10vw);
     width: min(40ch, 80%);
     margin-inline: auto;
 
@@ -27,14 +36,11 @@ h1{
 section{
     text-align: center;
     
-    margin-inline: 5rem;
+    margin-inline: min(5rem, 5vw);
     
 
     p {
         margin-block: 2rem;
-        font-size: 1.3rem;
-        line-height: 2rem;
-        color: #ccc ;
     }
 
     h2{
@@ -42,7 +48,7 @@ section{
 
         font-weight: 500;
         font-size: 3rem;
-        margin-top: 10rem;
+        margin-top: min(10rem, 15vw);
         margin-bottom: 0.2rem;
     }
 
@@ -51,6 +57,7 @@ section{
 .event{
     text-align: start;
     margin-block: 5rem;
+
 
     display: grid;
     justify-content: center;
@@ -69,28 +76,40 @@ section{
     }
 
     .label{
-        font-size: 1.3rem;
+        font-size: clamp(1rem, 3vw, 1.3rem);
         margin-block: 0.3rem;
 
         display: flex;
-        transform: translateX(5%);
-
 
         .left{
             font-weight: 600;
             flex-shrink: 0;
-            width: 12ch;
+            width: clamp(6rem, 40vw, 12ch)
         }
 
         .right{
             text-align: left;
             color: #ccc;
         }
+
+        .short_link {
+            display: none;
+        }
+
         a{
             color: #009fff;
             &:hover{
                 color: #0080c0;
             }
+        }
+    }
+
+    @media screen and (width < 600px) {
+        .short_link {
+            display: block !important;
+        }
+        .long_link {
+            display: none;
         }
     }
     
@@ -117,7 +136,7 @@ section{
 
     font-weight: 500;
     font-size: 3rem;
-    margin-top: 10rem;
+    margin-top: min(10rem, 15vw);
     margin-bottom: 0.2rem;
 }
 
@@ -127,8 +146,4 @@ section{
     margin-block: 2rem;
 
     text-align: center;
-    font-size: 1.3rem;
-    line-height: 1.8rem;
-
-    color: #ccc;
 }
