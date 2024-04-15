@@ -66,3 +66,11 @@ $(window).resize(function() {
         close_menu()
     }
 });
+
+
+$(window).keydown((e) => {
+    if (e.key == 'f') {
+        alert("Width = " + window.innerWidth)
+    }
+
+})
