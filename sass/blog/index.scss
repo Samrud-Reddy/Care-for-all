@@ -19,6 +19,8 @@ h1{
     flex-direction: row;
     gap: 2rem;
 
+    margin-bottom: 8rem;
+
 
     .left {
         width: 50%;
@@ -49,7 +51,7 @@ h1{
             gap: 0.5rem;
 
             img {
-                height: min(3rem, 7vw);
+                height: min(2.4rem, 6vw);
                 aspect-ratio: 1 / 1;
             }
         }
