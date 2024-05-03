@@ -49,6 +49,10 @@ app.get('/fundraise', (req, res) => {
   res.render('fundraise.ejs')
 })
 
+app.get('/blog', (req, res) => {
+  res.render('blog.ejs')
+})
+
 app.get('/donate', (req, res) => {
   res.redirect('https://www.ketto.org/fundraiser/providing-healthcare-and-awareness-to-1000-underprivileged-children?utm_medium=copy&utm_content=d6ae5353cc5b9b9003e5d7f6c894b895&shby=1&utm_source=external_Ketto&utm_campaign=providing-healthcare-and-awareness-to-1000-underprivileged-children')
 })
