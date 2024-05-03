@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+
+    <%- include('../partials/header') %>
+    <link rel="stylesheet" href="styles/default.css">
+    <%- include('../partials/navbar') %>
+
+    <link rel="stylesheet" href="styles/blog/blog_template.css">    
+</head>
+<body>
+    <h1><%= title %></h1>
+    <div class="date"><%= date %></div>
+    <div class="read_time"><%= read_time %></div>
+    <img class="left" src="/files/blog/<%= img %>.jpeg" alt="blog">
+    <p><%= text %></p>
+</body>
+</html>

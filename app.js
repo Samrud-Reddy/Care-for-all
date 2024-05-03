@@ -49,9 +49,39 @@ app.get('/fundraise', (req, res) => {
   res.render('fundraise.ejs')
 })
 
+
+//Gets number of caresel files
+const pathToBlog = './views/blog/blogs';
+
+const files = fs.readdirSync(pathToBlog);
+
+blog_descriptions = [] 
+
+// Loop through each file
+files.forEach(file => {
+    // Get the full path of the file
+    const filePath = path.join(pathToBlog, file);
+    
+    const data = fs.readFileSync(filePath, 'utf8');
+    
+    // Parse the JSON data
+    blog_data = JSON.parse(data);
+    const file_name = path.basename(file, path.extname(file));
+
+    blog_data.url = file_name
+
+    blog_descriptions.push(blog_data)
+
+    app.get('/blog/'+file_name, (req, res) => {
+      res.render('blog/blog-framework.ejs', blog_data)
+    })
+});
+
+
 app.get('/blog', (req, res) => {
-  res.render('blog.ejs')
+  res.render('blog.ejs', {blogs: blog_descriptions})
 })
+
 
 app.get('/donate', (req, res) => {
   res.redirect('https://www.ketto.org/fundraiser/providing-healthcare-and-awareness-to-1000-underprivileged-children?utm_medium=copy&utm_content=d6ae5353cc5b9b9003e5d7f6c894b895&shby=1&utm_source=external_Ketto&utm_campaign=providing-healthcare-and-awareness-to-1000-underprivileged-children')

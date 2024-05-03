@@ -15,19 +15,9 @@
 
     <h1>Our Blogs</h1>
 
-    <%- include("partials/blog", {
-        url: "first-blog",
-        title: "Our First Blog",
-        img: "blog",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aut tenetur sit commodi laudantium natus reprehenderit id, asperiores doloribus officiis est possimus sint alias nostrum architecto corrupti mollitia, dolores minus. Et illum impedit ducimus at optio nam corrupti excepturi magni id possimus officia minima modi sed doloribus officiis dolor odio perspiciatis voluptatibus voluptas atque quisquam vel, consectetur facere tempora. Veniam.",
-    }) %>
-
-    <%- include("partials/blog", {
-        url: "second-blog",
-        title: "Our second Blog",
-        img: "blog",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aut tenetur sit commodi laudantium natus reprehenderit id, asperiores doloribus officiis est possimus sint alias nostrum architecto corrupti mollitia, dolores minus. Et illum impedit ducimus at optio nam corrupti excepturi magni id possimus officia minima modi sed doloribus officiis dolor odio perspiciatis voluptatibus voluptas atque quisquam vel, consectetur facere tempora. Veniam.",
-    }) %>
+    <% blogs.forEach(element => { %>
+       <%- include("partials/blog", element) %>     
+    <% }); %>
 
 <%- include("partials/footer") %>
 </body>
