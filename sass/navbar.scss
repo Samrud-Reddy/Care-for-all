@@ -75,7 +75,7 @@
 }
 
 // Nav bar on top
-@media screen and (width >= 1050px) {
+@media screen and (width >= 1150px) {
     .cover {
         display: none;
     }
@@ -153,7 +153,7 @@
 
 
 // Nav bar on side
-@media screen and (width < 1050px) {
+@media screen and (width < 1150px) {
     .nav_buttons {
         // display: flex;
         display: none;

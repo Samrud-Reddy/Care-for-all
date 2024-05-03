@@ -51,7 +51,7 @@ $(".has_content").click((e) => {
 
 navbar_is_vertical = null
 
-if (window.innerWidth >= 1050) {
+if (window.innerWidth >= 1150) {
     navbar_is_vertical = false
 } else {
     navbar_is_vertical = true
@@ -59,10 +59,10 @@ if (window.innerWidth >= 1050) {
 
 $(window).resize(function() {
     var windowWidth = window.innerWidth;
-    if (windowWidth >= 1050) {
+    if (windowWidth >= 1150) {
         $(".nav_buttons").css("display", "flex");
         navbar_is_vertical = false
-    } else if (windowWidth < 1050 && !navbar_is_vertical) {
+    } else if (windowWidth < 1150 && !navbar_is_vertical) {
         close_menu()
     }
 });
