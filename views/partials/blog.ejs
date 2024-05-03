@@ -3,15 +3,36 @@
     
     
     <div class="right">
-        <h2><%= title %></h2>
+        <h2>
+            <a href="/blog/<%= url %>" target="_blank">
+                <%= title %>
+            </a>
+        </h2>
         <div class="share">
-            <img src="/files/icons/instagram.png" alt="instagram">
-            <img src="/files/icons/mail.png" alt="email">
-            <img src="/files/icons/whatsapp.png" alt="whatsapp">
-            <img src="/files/icons/twitter.png" alt="twitter">
+            <a href="https://www.instagram.com/" target="popup"><img src="/files/icons/instagram.png" alt="instagram"></a>
+            <a href="mailto:?subject=Check%20out%20the%20CareForAll%20blog" target="_blank"><img src="/files/icons/mail.png" alt="email"></a>
+            <a class="whatsapp-<%= url %>" target="_blank"><img src="/files/icons/whatsapp.png" alt="whatsapp"></a>
+            <a class="twitter-<%= url %>" target="_blank"><img src="/files/icons/twitter.png" alt="twitter"></a>
         </div>
         <p class="text">
             <%= description %>
         </p>
     </div>
 </div>
+
+<script>
+    $(document).ready(function() {
+        blog_link = window.location.href + "/<%= url %>"
+        
+        text = "Check out the CareForAll blog at\n" + blog_link
+
+        text = encodeURIComponent(text)
+        blog_link = encodeURIComponent(blog_link)
+
+        twitter_link = `https://twitter.com/intent/tweet?url=${blog_link}&text=${encodeURIComponent("Check out the CareForAll blog")}`
+        whatsapp_link = "https://api.whatsapp.com/send?text=" + text
+
+        $(".whatsapp-<%= url %>").attr("href", whatsapp_link)
+        $(".twitter-<%= url %>").attr("href", twitter_link)
+    });
+</script>

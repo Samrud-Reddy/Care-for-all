@@ -38,6 +38,14 @@ h1{
 
         h2 {
             font-size: clamp(1.4rem, 5vw, 2.4rem);
+            a {
+                color: inherit;
+                text-decoration: inherit;
+
+                &:hover {
+                    opacity: 80%;
+                }
+            }
         }
 
         .share {
@@ -49,6 +57,10 @@ h1{
             align-items: center;
 
             gap: 0.5rem;
+
+            a:hover {
+                opacity: 80%;
+            }
 
             img {
                 height: min(2.4rem, 6vw);
