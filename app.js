@@ -122,7 +122,7 @@ app.use((req, res) => {
   res.render("pagenotfound.ejs")
 })
 
-app.listen(port, '192.168.0.211', () => {
+app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
   console.log(`http://localhost:${port}`)
 })
