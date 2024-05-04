@@ -52,10 +52,17 @@ app.get('/fundraise', (req, res) => {
 
 //Gets number of caresel files
 const pathToBlog = './views/blog/blogs';
+const pathToText = './views/blog/texts';
+const pathToDescription = './views/blog/descriptions';
 
 const files = fs.readdirSync(pathToBlog);
 
 blog_descriptions = [] 
+
+function changeExtension(file, extension) {
+  const basename = path.basename(file, path.extname(file))
+  return path.join(path.dirname(file), basename + extension)
+}
 
 // Loop through each file
 files.forEach(file => {
@@ -63,12 +70,16 @@ files.forEach(file => {
     const filePath = path.join(pathToBlog, file);
     
     const data = fs.readFileSync(filePath, 'utf8');
+    let text = fs.readFileSync(path.join(pathToText, changeExtension(file, ".txt")), 'utf8')
+    let description = fs.readFileSync(path.join(pathToDescription, changeExtension(file, ".txt")), 'utf8')
     
     // Parse the JSON data
-    blog_data = JSON.parse(data);
+    let blog_data = JSON.parse(data);
     const file_name = path.basename(file, path.extname(file));
 
     blog_data.url = file_name
+    blog_data.text = text
+    blog_data.description = description
 
     blog_descriptions.push(blog_data)
 
