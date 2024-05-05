@@ -1,1 +1,1 @@
-/*# sourceMappingURL=blog_template.css.map */
+h1{text-align:center;font-size:3rem;margin-block:5rem}.text{font-size:clamp(1rem,2vw,1.2rem);line-height:clamp(1.2rem,3vw,1.4rem);font-weight:500;color:#ccc}.body{width:min(100ch,80vw);margin-inline:auto}.body .head{display:flex;flex-direction:row;justify-content:space-between;gap:2rem;font-size:1.4rem;font-weight:600}.body .blog{text-align:center;margin-block:3rem;margin-bottom:5rem}.body img{width:100%;aspect-ratio:auto}/*# sourceMappingURL=blog_template.css.map */
