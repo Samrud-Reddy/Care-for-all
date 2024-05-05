@@ -1,0 +1,24 @@
+
+<a href="https://www.instagram.com/" target="popup"><img src="/files/icons/instagram-g.png" alt="instagram"></a>
+<a class="email-<%= url %>" href="mailto:?subject=Check%20out%20the%20CareForAll%20blog" target="_blank"><img src="/files/icons/mail-g.png" alt="email"></a>
+<a class="whatsapp-<%= url %>" target="_blank"><img src="/files/icons/whatsapp-g.png" alt="whatsapp"></a>
+<a class="twitter-<%= url %>" target="_blank"><img src="/files/icons/twitter-g.png" alt="twitter"></a>
+
+<script>
+    $(document).ready(function() {
+        blog_link = window.location.href + "/<%= url %>"
+        
+        text = "Check out the CareForAll blog at\n" + blog_link
+
+        text = encodeURIComponent(text)
+        blog_link = encodeURIComponent(blog_link)
+
+        twitter_link = `https://twitter.com/intent/tweet?url=${blog_link}&text=${encodeURIComponent("Check out the CareForAll blog")}`
+        whatsapp_link = "https://api.whatsapp.com/send?text=" + text
+        email_link = `mailto:?subject=${encodeURIComponent("Check out the CareForAll")}&body=${blog_link}`
+
+        $(".whatsapp-<%= url %>").attr("href", whatsapp_link)
+        $(".twitter-<%= url %>").attr("href", twitter_link)
+        $(".email-<%= url %>").attr("href", email_link)
+    });
+</script>
