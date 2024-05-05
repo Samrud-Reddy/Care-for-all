@@ -17,6 +17,9 @@
         <div class="head">
             <div class="date"><%= date %></div>
             <div class="read_time"><%= read_time %> read</div>
+            <div class="share">
+                <%- include("../partials/share_buttons") %>
+            </div>
         </div>
         
         <p class="text blog"><%= text %></p>
