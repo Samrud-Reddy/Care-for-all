@@ -64,6 +64,10 @@ function changeExtension(file, extension) {
   return path.join(path.dirname(file), basename + extension)
 }
 
+function format_text(text) {
+  return text
+}
+
 // Loop through each file
 files.forEach(file => {
     // Get the full path of the file
@@ -78,7 +82,7 @@ files.forEach(file => {
     const file_name = path.basename(file, path.extname(file));
 
     blog_data.url = file_name
-    blog_data.text = text
+    blog_data.text = format_text(text)
     blog_data.description = description
 
     blog_descriptions.push(blog_data)
