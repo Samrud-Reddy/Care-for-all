@@ -15,7 +15,7 @@
 
         twitter_link = `https://twitter.com/intent/tweet?url=${blog_link}&text=${encodeURIComponent("Check out the CareForAll blog")}`
         whatsapp_link = "https://api.whatsapp.com/send?text=" + text
-        email_link = `mailto:?subject=${encodeURIComponent("Check out the CareForAll")}&body=${blog_link}`
+        email_link = `mailto:?subject=${encodeURIComponent("Check out the CareForAll blog")}&body=${blog_link}`
 
         $(".whatsapp-<%= url %>").attr("href", whatsapp_link)
         $(".twitter-<%= url %>").attr("href", twitter_link)
