@@ -74,7 +74,7 @@ files.forEach(file => {
     const filePath = path.join(pathToBlog, file);
     
     const data = fs.readFileSync(filePath, 'utf8');
-    let text = fs.readFileSync(path.join(pathToText, changeExtension(file, ".txt")), 'utf8')
+    let text = fs.readFileSync(path.join(pathToText, changeExtension(file, ".html")), 'utf8')
     let description = fs.readFileSync(path.join(pathToDescription, changeExtension(file, ".txt")), 'utf8')
     
     // Parse the JSON data
