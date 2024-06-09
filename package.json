@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "run": "nodemon",
+    "run": "nodemon --watch static --watch views -e html,js,json,txt,png,jpeg,jpg app.js",
     "build_sass": "sass sass:styles --style=compressed",
     "watch_sass": "sass sass:styles -w --style=compressed"
   },
