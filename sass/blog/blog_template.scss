@@ -56,6 +56,14 @@ h1{
         margin-bottom: 5rem;
 
         white-space: pre-wrap;
+
+        a, a:visited, a:active {
+            color: #ccc;
+        }
+
+        a:hover {
+            color: darken($color: #ccc, $amount: 20%);
+        }
     }
 
     img {
