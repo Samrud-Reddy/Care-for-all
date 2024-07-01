@@ -212,7 +212,7 @@
 
     .content{
         display: grid;
-        grid-template-columns: 3;
+        grid-template-columns: 6;
         grid-template-rows: 5;
 
         row-gap: 4rem;
@@ -223,7 +223,15 @@
 
     }
 
+    .idcard {
+        grid-column-start: span 2;
+    }
+
     .founder{
+        grid-column-start: span 6;
+    }
+
+    .co_founder{
         grid-column-start: span 3;
     }
 
