@@ -1,7 +1,31 @@
 const counters = document.querySelectorAll('.counter');
 
+function add_commas(number) {
+    if (number.length <= 3) {
+        return number
+    }
+    comma_length = 2
+
+    num_string = number.toString().split("").reverse();
+     
+    for (i = 3; i < num_string.length; i += comma_length + 1){
+        num_string.splice(i, 0, ",");
+    }
+
+    return num_string.reverse().join("");
+}
+
+function get_numbers(str) {
+    return parseInt(str.match(/[0-9]/g).join(""));
+}
+
+function has_commas(str) {
+    return str != get_numbers(str)
+}
+
 function animate(elem, progress) {
-    let final = +elem.getAttribute("final")
+    let final_txt = elem.getAttribute("final")
+    let final = get_numbers(final_txt)
     let time = +elem.getAttribute("time")*100/5
 
     let interval = final/time
@@ -12,7 +36,11 @@ function animate(elem, progress) {
         if (progress>final){
             progress=final;
         }
-        elem.innerHTML = Math.floor(progress);
+        if (has_commas(final_txt)) {
+            elem.innerHTML = add_commas(Math.floor(progress));
+        } else {
+            elem.innerHTML = Math.floor(progress);
+        }
         setTimeout(animate, 50, elem, progress)
     }
 }
