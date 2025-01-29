@@ -24,9 +24,10 @@ function has_commas(str) {
 }
 
 function animate(elem, progress) {
+    let dt = 32.59
     let final_txt = elem.getAttribute("final")
     let final = get_numbers(final_txt)
-    let time = +elem.getAttribute("time")*100/5
+    let time = +elem.getAttribute("time")*(1000/dt)
 
     let interval = final/time
 
@@ -41,7 +42,7 @@ function animate(elem, progress) {
         } else {
             elem.innerHTML = Math.floor(progress);
         }
-        setTimeout(animate, 50, elem, progress)
+        setTimeout(animate, dt, elem, progress)
     }
 }
 
