@@ -2,7 +2,6 @@ const express = require('express')
 const path = require("path")
 var nodemailer = require('nodemailer');
 const fs = require('fs');
-const { text } = require('body-parser');
 require('dotenv').config()
 
 const app = express()
@@ -10,9 +9,9 @@ const port = 5000
 
 
 app.set('view engine', 'ejs')
-app.use("*/styles", express.static(path.join(__dirname, "styles")));
-app.use("*/files", express.static(path.join(__dirname, "static")));
-app.use("*/scripts", express.static(path.join(__dirname, "scripts")));
+app.use("/styles", express.static(path.join(__dirname, "styles")));
+app.use("/files", express.static(path.join(__dirname, "static")));
+app.use("/scripts", express.static(path.join(__dirname, "scripts")));
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
