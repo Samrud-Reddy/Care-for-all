@@ -1,6 +1,6 @@
 # CareForAll website
 
-This is the official website for the NGO CareForAll. The website is built using Node.js, Express.js, EJS, Sass, and HTML.
+This was the first official website for the NGO CareForAll. The website is built using Node.js, Express.js, EJS, Sass, and HTML.
 
 ## Table of Contents
 
@@ -13,7 +13,7 @@ This is the official website for the NGO CareForAll. The website is built using 
 
 ## About Us
 
-CareForAll is an NGO based out of the city Bangalore in India. CareForAll was founded by a teenager in the school Inventure Academy with the aim of helping children.
+CareForAll is an NGO based out of the city Bangalore in India. CareForAll was founded by Arnav Raj Agharwal with the aim of providing medical aid to 1000+ underprivileged children.
 
 ## Installation
 
@@ -44,7 +44,7 @@ Then, open your browser and go to `http://localhost:5000`.
 
 ### Development Scripts
 
-- **Live reload server (Nodemon):**
+- **Live reload server:**
   ```bash
   npm run run
   ```
